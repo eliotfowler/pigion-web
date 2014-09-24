@@ -1,0 +1,35 @@
+.navbar {
+    border-radius: 0px;
+    background-color: rgb(65,74,91);
+    border: 0px;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-brand img{
+    margin-top: 10px;
+}
+
+.small-link {
+    font-size: 12px;
+}
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+.navbar-nav li {
+    float: none;
+    display: inline-block;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    background-color: #455263;
+    color:#45caa7;
+}
+
+.sort-active a {
+    color: #45caa7 !important;
+}
