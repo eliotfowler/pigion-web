@@ -1,7 +1,10 @@
+/* Navbar */
+
 .navbar {
     border-radius: 0px;
     background-color: rgb(65,74,91);
     border: 0px;
+    margin-bottom: 0px;
 }
 
 .navbar-brand {
@@ -32,4 +35,46 @@
 
 .sort-active a {
     color: #45caa7 !important;
+}
+
+/* Top Info Section */
+
+#files-information {
+    position: relative;
+    background-color: #455263;
+    height: 40px;
+}
+
+ul.horizontal {
+    display: inline;
+    float: left;
+    position: absolute;
+    left: 10px;
+}
+
+ul.horizontal li {
+    display: inline;
+    margin-right: 15px;
+    color: rgb(119,126,140);
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.center-wrapper {
+    position: relative;
+    left: 50%;
+    float: left;
+}
+
+.center-subheader {
+    position: relative;
+    left: -50%;
+    float: left;
+    margin-top: 10px;
+}
+
+.center-subheader button {
+    background: rgb(68, 74, 86);
+    border: 0;
+    color: rgb(141,147,158);
 }

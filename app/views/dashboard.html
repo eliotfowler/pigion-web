@@ -29,3 +29,31 @@
         </div>
     </div>
 </nav>
+
+<div class="container">
+
+    <div id="files-information">
+        <div class="center-wrapper">
+            <div class="center-subheader">
+                <button>New +</button><span> or Drag files in to upload</span>
+            </div>
+        </div>
+
+        <ul class="horizontal">
+            <li>
+                <ng-pluralize class="file-tidbit"
+                              count="files.length"
+                              when="{'0':'No files',
+                                     '1':'1 file',
+                                     'other':'{} files'}">
+                </ng-pluralize>
+            </li>
+            <li><span class="file-tidbit">{{totalFileSize}}kb</span></li>
+            <li><span class="file-tidbit">{{userAllTimeFiles}} delivered</span></li>
+        </ul>
+
+
+
+    </div>
+
+</div>
