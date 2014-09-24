@@ -23,9 +23,9 @@ angular
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
+            .when('/dashboard', {
+                templateUrl: 'views/dashboard.html',
+                controller: 'DashboardCtrl'
             })
             .otherwise({
                 redirectTo: '/login'
