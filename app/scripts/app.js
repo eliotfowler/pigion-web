@@ -16,7 +16,8 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'angularMoment'
+        'angularMoment',
+        'cfp.hotkeys'
     ])
     .config(function ($routeProvider) {
         $routeProvider

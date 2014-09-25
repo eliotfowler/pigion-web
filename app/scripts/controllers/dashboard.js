@@ -2,7 +2,7 @@
 
 angular.module('pigionWebApp')
 
-    .controller('DashboardCtrl', function ($scope) {
+    .controller('DashboardCtrl', function ($scope, hotkeys) {
         $scope.files = [
             {
                 name: 'Pigion',
@@ -42,6 +42,7 @@ angular.module('pigionWebApp')
             }
         ];
 
+        $scope.toggleCheatSheet = hotkeys.toggleCheatSheet;
 
         $scope.totalFileSize = 200;
         $scope.userAllTimeFiles = 32;
