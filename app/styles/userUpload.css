@@ -1,0 +1,64 @@
+.outer-container {
+    position: relative;
+    width: 96%;
+    height: 100px;
+    background-color: rgba(71, 81, 97, .9);
+    margin: 3px auto;
+    -webkit-box-shadow:inset 0 0 0 1px rgba(62,66,75,1);
+    box-shadow:inset 0 0 0 1px rgba(62,66,75,1);
+    padding: 10px;
+    color: rgb(135, 152, 170);
+}
+
+.file-preview {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: rgb(61, 68, 80);
+    float:left;
+}
+
+
+.middle-section {
+    float:left;
+}
+
+
+.file-title {
+    display: inline-block;
+    margin-left: 10px;
+    font: Helvetica extrabold;
+    float:left;
+    font-size: 25px;
+    max-height: 30px;
+}
+
+    .file-title .file-name {
+        color: white;
+    }
+
+    .file-title .file-extension {
+        color: #808080;
+    }
+
+.file-info {
+    max-height: 25px;
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+    .file-info .file-info-bit {
+        float: left;
+    }
+
+    /*.file-info .downloads {*/
+        /*float: left;*/
+    /*}*/
+
+    /*.file-info .password {*/
+        /*float: left;*/
+    /*}*/
+
+    /*.file-info .time {*/
+        /*float: left;*/
+    /*}*/
