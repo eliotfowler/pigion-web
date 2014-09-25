@@ -27,7 +27,7 @@ angular.module('pigionWebApp')
                 extension: 'css',
                 numDownloads: 1,
                 maxDownloads: 1,
-                password: true,
+                password: false,
                 expirationDate: '2014-09-30T13:30:00',
                 size: 56
             },
