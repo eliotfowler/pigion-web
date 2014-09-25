@@ -78,3 +78,7 @@ ul.horizontal li {
     border: 0;
     color: rgb(141,147,158);
 }
+
+.files-section > div{
+    margin-top: 10px;
+}
