@@ -10,6 +10,10 @@ angular.module('pigionWebApp').directive('userUpload', function () {
             $scope.getNumPasswordBubbles = function() {
                 return new Array(numPasswordBubbles);
             }
+
+            $scope.getDate = function() {
+                return new Date($scope.file.expirationDate);
+            }
         },
         link: function postLink(scope, element, attrs) {
         }
