@@ -5,30 +5,23 @@ angular.module('pigionWebApp').directive('userUpload', function () {
         scope: {
             'file': '=file'
         },
-        controller: function($scope, $timeout) {
+        controller: function($scope) {
             $scope.date = new Date($scope.file.expirationDate);
-            $scope.newFile = Math.random()<.5;
+            $scope.newFile = $scope.file.newFile;
 
             $scope.counter =  !!$scope.newFile ? 0 : 100;
+            $scope.dynamic = $scope.counter;
             $scope.doneUploading = !$scope.newFile;
             $scope.max = 100;
 
-            $scope.countdown = function() {
-                $timeout(function() {
-                    $scope.dynamic = $scope.counter;
-                    $scope.percentUploaded = $scope.dynamic;
-                    $scope.counter++;
-                    if($scope.dynamic < $scope.max) {
-                        $scope.countdown();
-                    } else {
-                        console.log('here');
+            if(!!$scope.newFile) {
+                $scope.$on('fileUploadPercent-' + $scope.file.guid, function(event, data) {
+                    $scope.dynamic = data;
+                    if($scope.dynamic == 100) {
                         $scope.doneUploading = true;
                     }
-
-                }, 1000);
-            };
-
-            $scope.countdown();
+                });
+            }
 
         },
         link: function postLink(scope, element, attrs) {
