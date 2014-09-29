@@ -41,7 +41,8 @@
     <div id="files-information">
         <div class="center-wrapper">
             <div class="center-subheader">
-                <button>New +</button><span> or Drag files in to upload</span>
+                <input class="upload-button" type="file" ng-file-select="onFileSelect($files)">
+                <span> or Drag files in to upload</span>
             </div>
         </div>
 
@@ -60,9 +61,8 @@
     </div>
 
     <div class="files-section">
-        <user-upload file=files[0]></user-upload>
         <div class="file-in-files" ng-repeat="i in files">
-
+            <user-upload file=i></user-upload>
         </div>
     </div>
 
