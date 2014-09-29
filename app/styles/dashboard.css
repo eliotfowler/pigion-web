@@ -85,8 +85,7 @@ ul.horizontal li {
 }
 
 .drop-zone {
-    display: none;
-    z-index: 1000;
+    z-index: 0;
     position: fixed;
     top:0;
     left:0;
@@ -95,6 +94,7 @@ ul.horizontal li {
 }
 
 .drop-zone span {
+    display: none;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -113,4 +113,12 @@ ul.horizontal li {
 
 .drop-zone.drop-hover span {
     display: inline-block;
+}
+
+.file-in-files {
+    height: 100px;
+}
+
+.container {
+    z-index: 500;
 }
