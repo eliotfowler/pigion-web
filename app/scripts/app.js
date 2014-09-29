@@ -17,9 +17,12 @@ angular
         'ngSanitize',
         'ngTouch',
         'angularMoment',
-        'cfp.hotkeys'
+        'cfp.hotkeys',
+        'restangular',
+        'angularFileUpload',
+        'ui.bootstrap'
     ])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, RestangularProvider) {
         $routeProvider
             .when('/login', {
                 templateUrl: 'views/login.html',
@@ -32,4 +35,6 @@ angular
             .otherwise({
                 redirectTo: '/login'
             });
+
+        RestangularProvider.setBaseUrl('http://localhost:9000');
     });
