@@ -42,7 +42,7 @@
         </div>
 
         <div class="file-size">
-            <span ng-show="!newFile || (newFile && !!doneUploading)">{{file.size}}kb</span>
+            <span ng-show="!newFile || (newFile && !!doneUploading)">{{file.size | bytes}}</span>
             <span ng-show="(newFile && !doneUploading)">{{percentUploaded}}% uploaded</span>
         </div>
     </div>
