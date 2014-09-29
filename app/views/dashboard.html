@@ -1,3 +1,9 @@
+<div class="drop-zone"
+     ng-file-drop="onFileSelect($files)"
+     ng-file-drag-over-class="drop-hover" >
+    <span>drop files here</span>
+</div>
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="container container-fluid">
 
@@ -55,9 +61,9 @@
 
     <div class="files-section">
         <user-upload file=files[0]></user-upload>
-        <user-upload file=files[1]></user-upload>
-        <user-upload file=files[2]></user-upload>
-        <user-upload file=files[3]></user-upload>
+        <div class="file-in-files" ng-repeat="i in files">
+
+        </div>
     </div>
 
 </div>
