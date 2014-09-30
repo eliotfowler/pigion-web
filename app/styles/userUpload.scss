@@ -79,12 +79,21 @@
     margin-right:-9px;
     background: rgb(64, 71, 86);
     color: rgb(95, 105, 119);
+    transition: .3s ease-out;
 }
+    .delete:hover {
+    background: #333e4d;
+    } 
+    .delete:hover i{
+        color: #f9974f;
+    }
 
     .delete i {
         margin-top: 40px;
         margin-left: 6px;
+        transition: .3s ease-out;
     }
+
 
 .copy {
     float: right;

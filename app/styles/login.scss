@@ -1,12 +1,24 @@
 body {
-    background: url('/images/bg.png') repeat scroll 0% 0% #455263;
+    background: #455263;
+    background-image: (./images/dot_path.png);
     font-family: helvetica neue,helvetica light,helvetica,arial;
     font-weight: 300;
+    
 }
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #3a404a inset;
     color: red;
+}
+
+#fade{
+    -webkit-transition:opacity 2s ease-in-out;
+}
+
+.page-header {
+padding-bottom: 9px;
+margin: 40px 0 0px;
+border-bottom: none;
 }
 
 a {

@@ -28,12 +28,24 @@
     display: inline-block;
 }
 
+.navbar-nav li a{
+        color: #646f7e;
+}
+
 .navbar-default .navbar-nav > .active > a {
     background-color: #455263;
-    color:#45caa7;
+    color:#45caa7 !important;
 }
 
 .sort-active a {
+    color: #45caa7 !important;
+}
+
+ul.nav li a {
+    color: #646f7e !important;
+}
+
+ul.nav li a:hover {
     color: #45caa7 !important;
 }
 
@@ -41,9 +53,9 @@
 
 #files-information {
     position: relative;
-    background-color: #455266;
     height: 40px;
-    margin-left: 10px;
+    margin-left: 2px;
+    color: #a8b0be;
 }
 
 ul.horizontal {
@@ -56,7 +68,7 @@ ul.horizontal {
 ul.horizontal li {
     display: inline;
     margin-right: 15px;
-    color: rgb(119,126,140);
+    color: #a8b0be;
     font-size: 14px;
     line-height: 40px;
 }
@@ -95,24 +107,35 @@ ul.horizontal li {
 
 .drop-zone span {
     display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
+    height: 200px;
     width: 200px;
-    margin-left: -100px;
+    padding-top: 90px;
+    vertical-align: middle;
+    background: rgba(65, 74, 91, 0.81);
+    text-align: center;
+    box-shadow: 0px 0px 24px rgb(42, 51, 66);
+    margin: 30vh auto;
+    transition: .3s ease-out;
 }
+    .drop-zone span:hover {
+    background: #45CAA7;
+    }
 
 .drop-zone.drop-hover {
     display: block;
-    background-color: rgba(220,220,220,.8);
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    border:5px solid red;
+    background-color: rgba(50, 57, 71, 0.75);
+    color: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* box-shadow: inset 0px 0px 0px black; */
+    filter: blur(20px) grayscale(20%);
+    /* -webkit-filter: blur(5px); */
+
 }
 
 .drop-zone.drop-hover span {
-    display: inline-block;
+    display: table;
 }
 
 .file-in-files {
@@ -121,4 +144,55 @@ ul.horizontal li {
 
 .container {
     z-index: 500;
+}
+
+
+
+
+@boxSize: 200px;
+@color: #0e6d82;
+
+.animatedBorderBox {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 12px;
+  width: @boxSize;
+  height: @boxSize;
+  color: @color;
+  font-size: 20px;
+
+  &:hover {
+    color: spin(@color, 15);
+    
+    .background {
+      background-position: 100px 0;
+    }
+    .content {
+      background-color: lighten(@color, 55);
+    }
+  }
+}
+
+.background, .content {
+  position:absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.background {
+  transition: 1200ms;
+  background-color: @color;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,1) 10px, rgba(255,255,255,1) 20px);
+  background-size: 30px;
+}
+
+.content {
+  transition: 200ms;
+  margin: 1px;
+  line-height: @boxSize;
+  text-align: center;
+  background-color: lighten(@color, 60);
 }

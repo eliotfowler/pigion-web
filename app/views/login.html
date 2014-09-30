@@ -1,14 +1,14 @@
 <!--<link href="/assets/css/bootstrap.min.css" rel="stylesheet"/>-->
 
-
 <script type="text/javascript">
     $(document).ready(function() {
         $('#fade')
                 .css({"opacity":0})   // Set to 0 as soon as possible – may result in flicker, but it's not hidden for users with no JS (Googlebot for instance!)
                 .delay(10000)           // Wait for a bit so the user notices it fade in
+                .css({"-webkit-transition":opacity 2s ease-in-out}); 
                 .css({"opacity":1});  // Fade it back in. Swap css for animate in legacy browsers if required.
-    });
 
+    });
 </script>
 
 <div class="center">
