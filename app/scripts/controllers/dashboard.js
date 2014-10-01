@@ -1,51 +1,68 @@
 'use strict';
 
 angular.module('pigionWebApp')
-
     .controller('DashboardCtrl', function ($scope, hotkeys, $upload, Restangular, UserService) {
-        console.log('token', UserService.getUserToken());
-        $scope.files = [
-            {
-                name: 'Pigion',
-                extension: 'css',
-                numDownloads: 0,
-                maxDownloads: -1,
-                password: false,
-                expirationDate: '2014-09-30T13:30:00',
-                size: 28000,
-                newFile: false
-            },
-            {
-                name: 'Swift',
-                extension: 'png',
-                numDownloads: 5,
-                maxDownloads: 10,
-                password: true,
-                expirationDate: '2014-09-30T13:30:00',
-                size: 28000,
-                newFile: false
-            },
-            {
-                name: 'Pigion',
-                extension: 'css',
-                numDownloads: 1,
-                maxDownloads: 1,
-                password: false,
-                expirationDate: '2014-09-30T13:30:00',
-                size: 56000,
-                newFile: false
-            },
-            {
-                name: 'Saxon Whitetail blk white superstar',
-                extension: 'jpg',
-                numDownloads: 0,
-                maxDownloads: -1,
-                password: true,
-                expirationDate: '2014-09-30T13:30:00',
-                size: 82000,
-                newFile: false
+        Restangular.configuration.defaultHeaders["X-Auth-Token"] = UserService.getUserToken();
+        $scope.files = [];
+        Restangular.all('files').getList().then(function(files) {
+
+            for(var i = 0; i< files.length; i++) {
+                var file = files[i];
+                console.log('file', file);
+                var actualFileNameStart = file.fileName.lastIndexOf('/')+1;
+                var actualFileNameEnd = file.fileName.lastIndexOf('.');
+                var actualFileNameSize = actualFileNameEnd - actualFileNameStart;
+                file.name = file.fileName.substr(actualFileNameStart, actualFileNameSize);
+                file.extension = file.fileName.substr(file.fileName.lastIndexOf('.')+1);
+                file.password = false;
+                file.size = file.contentSize;
+                file.expirationDate = file.expirationTime;
+
+                $scope.files.push(file);
             }
-        ];
+        });
+//        $scope.files = [
+//            {
+//                name: 'Pigion',
+//                extension: 'css',
+//                numDownloads: 0,
+//                maxDownloads: -1,
+//                password: false,
+//                expirationDate: '2014-09-30T13:30:00',
+//                size: 28000,
+//                newFile: false
+//            },
+//            {
+//                name: 'Swift',
+//                extension: 'png',
+//                numDownloads: 5,
+//                maxDownloads: 10,
+//                password: true,
+//                expirationDate: '2014-09-30T13:30:00',
+//                size: 28000,
+//                newFile: false
+//            },
+//            {
+//                name: 'Pigion',
+//                extension: 'css',
+//                numDownloads: 1,
+//                maxDownloads: 1,
+//                password: false,
+//                expirationDate: '2014-09-30T13:30:00',
+//                size: 56000,
+//                newFile: false
+//            },
+//            {
+//                name: 'Saxon Whitetail blk white superstar',
+//                extension: 'jpg',
+//                numDownloads: 0,
+//                maxDownloads: -1,
+//                password: true,
+//                expirationDate: '2014-09-30T13:30:00',
+//                size: 82000,
+//                newFile: false
+//            }
+//        ];
 
         function getSortFunction(fieldName) {
             return function(file1, file2) {
