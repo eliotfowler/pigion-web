@@ -22,48 +22,6 @@ angular.module('pigionWebApp')
                 $scope.files.push(file);
             }
         });
-//        $scope.files = [
-//            {
-//                name: 'Pigion',
-//                extension: 'css',
-//                numDownloads: 0,
-//                maxDownloads: -1,
-//                password: false,
-//                expirationDate: '2014-09-30T13:30:00',
-//                size: 28000,
-//                newFile: false
-//            },
-//            {
-//                name: 'Swift',
-//                extension: 'png',
-//                numDownloads: 5,
-//                maxDownloads: 10,
-//                password: true,
-//                expirationDate: '2014-09-30T13:30:00',
-//                size: 28000,
-//                newFile: false
-//            },
-//            {
-//                name: 'Pigion',
-//                extension: 'css',
-//                numDownloads: 1,
-//                maxDownloads: 1,
-//                password: false,
-//                expirationDate: '2014-09-30T13:30:00',
-//                size: 56000,
-//                newFile: false
-//            },
-//            {
-//                name: 'Saxon Whitetail blk white superstar',
-//                extension: 'jpg',
-//                numDownloads: 0,
-//                maxDownloads: -1,
-//                password: true,
-//                expirationDate: '2014-09-30T13:30:00',
-//                size: 82000,
-//                newFile: false
-//            }
-//        ];
 
         function getSortFunction(fieldName) {
             return function(file1, file2) {
@@ -112,7 +70,7 @@ angular.module('pigionWebApp')
 
                 $scope.files.unshift(newFile);
                 $scope.upload = $upload.upload({
-                    url: 'http://localhost:9000/files/upload', //upload.php script, node.js route, or servlet url
+                    url: ENV.apiEndpoint + '/files/upload',
                     //method: 'POST' or 'PUT',
                     headers: {'X-Auth-Token': UserService.getUserToken()},
                     file: file
