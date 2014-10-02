@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('pigionWebApp')
-    .controller('DashboardCtrl', function ($scope, hotkeys, $upload, Restangular, UserService) {
-//        Restangular.configuration.baseUrl = ENV.apiEndpoint;
+    .controller('DashboardCtrl', function ($scope, hotkeys, $upload, Restangular, UserService, ENV) {
+        Restangular.configuration.baseUrl = ENV.apiEndpoint;
         Restangular.configuration.defaultHeaders["X-Auth-Token"] = UserService.getUserToken();
         $scope.files = [];
         Restangular.all('files').getList().then(function(files) {

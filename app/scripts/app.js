@@ -25,6 +25,10 @@ angular
     ])
     .config(function ($routeProvider, RestangularProvider) {
         $routeProvider
+            .when('/', {
+                templateUrl: 'views/landing.html',
+                controller: 'LandingCtrl'
+            })
             .when('/login', {
                 templateUrl: 'views/login.html',
                 controller: 'LoginCtrl'
@@ -33,7 +37,11 @@ angular
                 templateUrl: 'views/dashboard.html',
                 controller: 'DashboardCtrl'
             })
+            .when('/:hashKey', {
+                templateUrl: 'views/download.html',
+                controller: 'DownloadCtrl'
+            })
             .otherwise({
-                redirectTo: '/login'
+                redirectTo: '/'
             });
     });

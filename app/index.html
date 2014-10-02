@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="description" content="Pigion. The simplest share anything tool.">
+    <meta name="keywords" content="pigion, pigeon, share, utility, simple, amazing, beautiful, open source, free">
+    <meta name="author" content="Eliot Fowler and Andrew Acree">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -16,9 +19,12 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link href="styles/main.css" rel="stylesheet" >
     <link href="styles/reset.css" rel="stylesheet"/>
+    <link href="styles/landing.css" rel="stylesheet"/>
     <link href="styles/login.css" rel="stylesheet"/>
     <link href="styles/dashboard.css" rel="stylesheet"/>
     <link href="styles/userUpload.css" rel="stylesheet"/>
+    <link href="styles/downloads.css" rel="stylesheet"/>
+
     <!-- endbuild -->
 </head>
 <body ng-app="pigionWebApp">
@@ -68,6 +74,14 @@
 <script src="bower_components/ng-file-upload/angular-file-upload.js"></script>
 <script src="bower_components/ng-file-upload-shim/angular-file-upload-shim.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<script src="scripts/vendor/landing/smoothscroll.js"></script>
+<script src="scripts/vendor/landing/jquery.easing.js"></script>
+<script src="scripts/vendor/landing/jquery.scrollto.min.js"></script>
+<script src="scripts/vendor/landing/jquery.localscroll.min.js"></script>
+<script src="scripts/vendor/landing/waypoints.min.js"></script>
+<script src="scripts/vendor/landing/notifications.js"></script>
+<script src="scripts/vendor/landing/init.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -79,6 +93,8 @@
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/controllers/login.js"></script>
 <script src="scripts/controllers/dashboard.js"></script>
+<script src="scripts/controllers/download.js"></script>
+<script src="scripts/controllers/landing.js"></script>
 
 <script src="scripts/directives/userUpload/userUpload.js"></script>
 <script src="scripts/directives/passwordTool/passwordTool.js"></script>
