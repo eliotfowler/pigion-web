@@ -2,6 +2,7 @@
 
 angular.module('pigionWebApp')
     .controller('LoginCtrl', function ($scope, Restangular, $location, UserService, ENV) {
+        console.log(ENV.apiEndpoint);
         Restangular.configuration.baseUrl = ENV.apiEndpoint;
 
         $scope.login = function login() {
