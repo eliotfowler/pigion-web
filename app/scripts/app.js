@@ -10,6 +10,7 @@
  */
 angular
     .module('pigionWebApp', [
+        'config',
         'ngAnimate',
         'ngCookies',
         'ngResource',
@@ -35,6 +36,4 @@ angular
             .otherwise({
                 redirectTo: '/login'
             });
-
-        RestangularProvider.setBaseUrl('http://localhost:9000');
     });

@@ -1,7 +1,9 @@
 'use strict';
 
 angular.module('pigionWebApp')
-    .controller('LoginCtrl', function ($scope, Restangular, $location, UserService) {
+    .controller('LoginCtrl', function ($scope, Restangular, $location, UserService, ENV) {
+//        Restangular.configuration.baseUrl = ENV.apiEndpoint;
+
         $scope.login = function login() {
             Restangular.all('auth').all('api').all('authenticate').all('userpass').post({
                 username: $scope.username,
