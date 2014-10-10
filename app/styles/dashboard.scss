@@ -148,28 +148,29 @@ ul.horizontal li {
 
 
 
-
+/*
 @boxSize: 200px;
 @color: #0e6d82;
+*/
 
 .animatedBorderBox {
   display: block;
   position: relative;
   overflow: hidden;
   margin: 12px;
-  width: @boxSize;
-  height: @boxSize;
-  color: @color;
+  width: 200px;
+  height: 200px;
+  color: #0e6d82;
   font-size: 20px;
 
   &:hover {
-    color: spin(@color, 15);
+    color: spin(#0e6d82, 15);
     
     .background {
       background-position: 100px 0;
     }
     .content {
-      background-color: lighten(@color, 55);
+      background-color: lighten(#0e6d82, 55);
     }
   }
 }
@@ -184,7 +185,7 @@ ul.horizontal li {
 
 .background {
   transition: 1200ms;
-  background-color: @color;
+  background-color: #0e6d82;
   background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,1) 10px, rgba(255,255,255,1) 20px);
   background-size: 30px;
 }
@@ -192,7 +193,7 @@ ul.horizontal li {
 .content {
   transition: 200ms;
   margin: 1px;
-  line-height: @boxSize;
+  line-height: 200px;
   text-align: center;
-  background-color: lighten(@color, 60);
+  background-color: lighten(#0e6d82, 60);
 }

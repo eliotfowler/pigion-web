@@ -10,8 +10,9 @@ body {
 }
 
 p {
-  line-height: 1.8em;
-  margin: 0 0 20px;
+	line-height: 1.2em;
+	margin: 0 0 20px;
+	font-size: 1.4em;
 }
 
 em {
@@ -216,6 +217,44 @@ nav ul li a:hover, nav ul li a.current {
   vertical-align: bottom;
 }
 
+.hero img {
+	width: 100%;
+}
+
+.brand_select {
+position: absolute;
+margin: 0 auto;
+width: 240px;
+background: rgba(0, 0, 0, 0.29);
+border-radius: 20px;
+left: 50%;
+margin-left: -120px;
+height: 76px;
+margin-top: -76px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+padding: 18px 10px;
+}
+
+.brand_select li {
+	float: left;
+	list-style: none;
+	margin-left: 14px;
+	margin-right: 28px;
+}
+
+li.brand_windows {
+	/* Height Fix */
+	margin-top: 5px;
+	margin-right: 0px;
+}
+
+.brand_select img {
+	width: 35px;
+	float: left;
+	list-style: none;
+}
+
 .action {
   /*background: -webkit-linear-gradient(left, #84CFA6 0%, #65AEA9 100%);*/
   /*background: -moz-linear-gradient(right, #84CFA6 0%, #65AEA9 100%);*/
@@ -243,8 +282,8 @@ nav ul li a:hover, nav ul li a.current {
 }
 
 #section1 h2 {
-  text-align: center;
-  margin: 100px 0px 120px 0px;
+text-align: center;
+margin: 50px 0px 40px 0px;
 }
 
 #section1 a {
@@ -264,20 +303,51 @@ nav ul li a:hover, nav ul li a.current {
   color: #FFF;
 }
 
+#section2 .content-box {
+	padding: 0px 30px;
+}
+
 /* Section 3 */
 
 #section3 {
   background-image: linear-gradient(90deg, #49cca6, #1fb4a9);
   box-shadow: inset 0px 10px rgba(69, 82, 99, 0.2);
+/*   height: 350px; */
+  color: #fff;
 }
 
 .static > span {
   font-size: 36px;
 }
 
-#section3 div {
-
+.static.container {
+	z-index: 2;
 }
+
+
+#section3 h3 {
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+#section3 h1 {
+	font-size: 5em;
+	font-weight: 500;
+	margin-top: -30px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.links_sent_bg {
+	background-image: url('/images/links_sent.png');
+	width: 100%;
+	background-size: 70%;
+	background-position: 10px -2px;
+	position: relative;
+	z-index: 1;
+	background-repeat: no-repeat;
+}
+
 
 /* Section 4 */
 
@@ -285,6 +355,7 @@ nav ul li a:hover, nav ul li a.current {
   background:#4A5362;
   color: white;
   box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
 }
 
 #section4 .text{
@@ -402,21 +473,24 @@ footer {
   background: #3E424B;
   padding: 40px 0px 20px;
   text-align: center;
-  margin-bottom:10px;
   color: #607387;
 }
 
 .footer-author {
   float: left;
   text-align: left;
-  width: 50%;
+}
+
+p.us {
+	color: white;
+	margin-top: 8px;
 }
 
 .footer-author img{
   float: left;
 }
 .footer-author p {
-  margin: 0px 0px -7px;
+  margin: 0px 0px 8px;
 }
 
 .footer-copyright {

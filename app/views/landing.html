@@ -21,9 +21,9 @@
 <header class="clearfix">
     <div class="container">
 
-        <div id="logo" class="three columns"><img src="images/logo_circ.png" alt=""><h3 id="logo-name">Pigion</h3></div>
+        <div id="logo" class="col-sm-3"><img src="images/logo_circ.png" alt=""><h3 id="logo-name">Pigion</h3></div>
 
-        <nav id="navigation" class="thirteen columns">
+        <nav id="navigation" class="col-sm-9">
             <ul class="clearfix">
                 <li><a class="current" href="#section1">Home</a></li>
                 <li><a href="#section2">Features</a></li>
@@ -36,28 +36,55 @@
 
 <section id="section1">
     <div class="content container">
-        <div class="sixteen columns"><h2>Welcome to the last share tool you will ever need.</h2></div>
-        <div class="device-container">
-            <div class="content-box one-third column">
-                <img src="http://placehold.it/120x90" alt="" />
-                <img src="http://placehold.it/90x70" alt="" />
-                <img src="http://placehold.it/30x50" alt="" />
+    	<div class="row">
+			<h2>Welcome to the last share tool you will ever need.</h2>
+    	</div>
+        <div class="row hero">
+        
+            <img src="images/apple_bg.png">
+        
+	        <div class="brand_select">
+		        <li class="brand_apple">
+			        <img src="images/apple_on.png">
+		        </li>
+		        <li class="brand_android">
+			        <img src="images/android_off.png">
+		        </li>
+		        <li class="brand_windows">
+			        <img src="images/windows_off.png">
+		        </li>
+	        </div>
+
+        <!--
+            <div class="col-xs-1 col-md-4">
+            	<div class="device">
+	                <img src="http://placehold.it/120x90" alt="" />
+	                <img src="http://placehold.it/90x70" alt="" />
+	                <img src="http://placehold.it/30x50" alt="" />
+                </div>
                 <h4>Apple</h4>
             </div>
-            <div class="content-box one-third column">
-                <img src="http://placehold.it/90x70" alt="" />
-                <img src="http://placehold.it/30x50" alt="" />
+            <div class="col-xs-1 col-md-4">
+            	<div class="device">
+	                <img src="http://placehold.it/90x70" alt="" />
+	                <img src="http://placehold.it/30x50" alt="" />
+            	</div>
                 <h4>Android</h4>
             </div>
-            <div class="content-box one-third column">
-                <img src="http://placehold.it/90x70" alt="" />
-                <img src="http://placehold.it/120x90" alt="" />
+            <div class="col-xs-1 col-md-4">
+            	<div class="device">
+	                <img src="http://placehold.it/90x70" alt="" />
+	                <img src="http://placehold.it/120x90" alt="" />
+            	</div>
                 <h4>Windows</h4>
             </div>
+            -->
         </div>
+        <!--
         <ul class="action sixteen columns">
             <li><a class="button" href="#">Download Now</a></li>
         </ul>
+        -->
     </div>
 </section>
 
@@ -67,18 +94,18 @@
         <p class="sub-heading twelve columns offset-by-four">Pigion makes sharing fun again. With its breadth of features and being open source, Pigion will assist you in all your sharing needs.</p>
         <br class="clear">
 
-        <div class="content-box one-third column">
-            <img src="http://placehold.it/150x150" alt="">
+        <div class="content-box col-sm-4">
+            <img src="images/lock.png" alt="">
             <h3>Secure Sharing</h3>
             <p>Password protect any file you want to share.</p>
         </div>
-        <div class="content-box one-third column">
-            <img src="http://placehold.it/150x150" alt="">
+        <div class="content-box col-sm-4">
+            <img src="images/keys.png" alt="">
             <h3>Dead simple sharing</h3>
             <p>Simply press ⌘ + ^ + c to upload any file on OSX or ^ + ⇧ + C on Windows.</p>
         </div>
-        <div class="content-box one-third column">
-            <img src="http://placehold.it/150x150" alt="">
+        <div class="content-box col-sm-4">
+            <img src="images/git.png" alt="">
             <h3>Open Source</h3>
             <p>Always know what is happening when uploading files because Pigion's source is totally open.</p>
         </div>
@@ -86,14 +113,36 @@
 </section>
 
 <section id="section3">
-    <div class="static container">
-        <span>Host your own data, but let us carry it</span>
 
-        <div class="four columns">
-            <h1>20,476</h1>
-            <span>Pigion links sent</span>
-        </div>
+	<div class="content container">
+		<div class="row">
+	    	<div class="col-sm-5">
+		        <h3>Host your own data, but let us carry it</h3>
+	    	</div>
+	    	
+	        <div class="col-sm-4 col-sm-offset-3">
+	            <h1>20,476</h1>
+	            <span>Pigion links sent</span>
+	        </div>
+		</div>
+	</div>
+    <div class="links_sent_bg"></div>
+<!--
+    <div class="container">
+	    <div class="row">
+	    	<div class="col-sm-5">
+		        <h3>Host your own data, but let us carry it</h3>
+	    	</div>
+	    	
+	        <div class="col-sm-4 col-sm-offset-3">
+	            <h1>20,476</h1>
+	            <span>Pigion links sent</span>
+	        </div>
+		</div>
     </div>
+    
+
+-->
 </section>
 
 <section id="section4">
@@ -124,7 +173,7 @@
         <div class="footer-author">
             <img src="images/logo_circ.png">
             <p>made by</p>
-            <p>Eliot Fowler + Andrew Acree</p>
+            <p class="us">Eliot Fowler + Andrew Acree</p>
         </div>
         <div class="footer-copyright">
             <p class="copyright">© 2014 Just Cause. All Rights Reserved. </p>
