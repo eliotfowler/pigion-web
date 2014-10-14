@@ -23,7 +23,7 @@ angular
         'angularFileUpload',
         'ui.bootstrap'
     ])
-    .config(function ($routeProvider, RestangularProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'views/landing.html',
@@ -44,4 +44,6 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
+
+        $locationProvider.html5Mode(true);
     });
