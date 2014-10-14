@@ -1,0 +1,1034 @@
+/* Setup */
+/* line 2, ../../app/styles/landing.scss */
+body {
+  background: -webkit-linear-gradient(left, #84CFA6 0%, #65AEA9 100%);
+  background: -moz-linear-gradient(right, #84CFA6 0%, #65AEA9 100%);
+  background: linear-gradient(to right, #84CFA6 0%, #65AEA9 100%);
+  color: #555;
+  font: normal 15px "Roboto",arial,sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* line 12, ../../app/styles/landing.scss */
+p {
+  line-height: 1.2em;
+  margin: 0 0 20px;
+  font-size: 1.4em;
+}
+
+/* line 18, ../../app/styles/landing.scss */
+em {
+  font-style: italic;
+}
+
+/* line 22, ../../app/styles/landing.scss */
+strong {
+  font-weight: 400;
+}
+
+/* line 26, ../../app/styles/landing.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.17em;
+  margin: 0 0 20px;
+}
+
+/* line 33, ../../app/styles/landing.scss */
+h1 {
+  font-size: 3.5em;
+  margin-top: 80px;
+}
+
+/* line 38, ../../app/styles/landing.scss */
+h2 {
+  font-size: 2.5em;
+}
+
+/* line 42, ../../app/styles/landing.scss */
+h3 {
+  font-size: 1.4666666666666667em;
+  font-weight: 300;
+}
+
+/* line 47, ../../app/styles/landing.scss */
+h4 {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* line 52, ../../app/styles/landing.scss */
+h5 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+/* line 57, ../../app/styles/landing.scss */
+h6 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* line 63, ../../app/styles/landing.scss */
+a {
+  color: #808691;
+  text-decoration: none;
+  transition: .5s ease;
+}
+
+/* line 69, ../../app/styles/landing.scss */
+a:hover {
+  color: #45caa7;
+  transition: .3s ease;
+}
+
+/* line 75, ../../app/styles/landing.scss */
+a.button {
+  display: inline-block;
+  font-size: 1.4666666666666667em;
+}
+
+/* line 80, ../../app/styles/landing.scss */
+a.button i {
+  display: inline-block;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: -8px;
+}
+
+/* line 88, ../../app/styles/landing.scss */
+a.button.small {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* line 93, ../../app/styles/landing.scss */
+a.button.small i {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  margin-bottom: -4px;
+}
+
+/* line 100, ../../app/styles/landing.scss */
+a.button:hover i, a.button.small:hover i {
+  background-position: bottom;
+}
+
+/* line 104, ../../app/styles/landing.scss */
+.small-border {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  height: 1px;
+  background: #ececec;
+}
+
+/* line 105, ../../app/styles/landing.scss */
+::selection {
+  background: #b2daeb;
+  color: #fff;
+}
+
+/* line 105, ../../app/styles/landing.scss */
+::-moz-selection {
+  background: #b2daeb;
+  color: #fff;
+}
+
+/* line 107, ../../app/styles/landing.scss */
+.sub-heading {
+  margin-bottom: 40px;
+}
+
+/* line 110, ../../app/styles/landing.scss */
+html.ie header {
+  border-bottom: 1px solid #aeaeea;
+}
+
+/* line 112, ../../app/styles/landing.scss */
+.overview {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* line 113, ../../app/styles/landing.scss */
+.content-box img {
+  margin-bottom: 20px;
+}
+
+/* line 114, ../../app/styles/landing.scss */
+.static {
+  position: relative;
+  overflow: hidden;
+  padding-top: 140px;
+  height: 455px;
+}
+
+/* line 115, ../../app/styles/landing.scss */
+.sidephone-big, .sidephone-small {
+  position: absolute;
+  bottom: 0;
+  left: 185px;
+}
+
+/* line 116, ../../app/styles/landing.scss */
+.static-list li {
+  float: left;
+  margin-right: 15px;
+}
+
+/* line 117, ../../app/styles/landing.scss */
+.static-list li:last-of-type {
+  margin-right: 0px;
+}
+
+/* line 118, ../../app/styles/landing.scss */
+.static-phone {
+  position: absolute;
+  bottom: -293px;
+  right: 230px;
+}
+
+/* line 119, ../../app/styles/landing.scss */
+.static-tablet {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 120, ../../app/styles/landing.scss */
+.detail {
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+  min-height: 623px;
+  overflow: hidden;
+  border-bottom: 1px solid #ececec;
+}
+
+/* line 121, ../../app/styles/landing.scss */
+.detail .sub-heading {
+  margin-bottom: 0px;
+}
+
+/* line 122, ../../app/styles/landing.scss */
+html.ie {
+  display: none;
+}
+
+/* Navigation */
+/* line 127, ../../app/styles/landing.scss */
+header {
+  width: 100%;
+  background: #4A5362;
+  min-height: 80px;
+  line-height: 80px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* line 135, ../../app/styles/landing.scss */
+#logo-name {
+  display: inline-block;
+  color: #fff;
+}
+
+/* line 140, ../../app/styles/landing.scss */
+nav ul {
+  float: right;
+}
+
+/* line 144, ../../app/styles/landing.scss */
+nav ul li {
+  float: left;
+  margin-right: 40px;
+}
+
+/* line 149, ../../app/styles/landing.scss */
+nav ul li:last-of-type {
+  margin-right: 0px;
+}
+
+/* line 153, ../../app/styles/landing.scss */
+nav ul li a {
+  color: #aeaeae;
+}
+
+/* line 157, ../../app/styles/landing.scss */
+nav ul li a:hover, nav ul li a.current {
+  color: #45caa7;
+}
+
+/* Mobile Nav */
+/* line 166, ../../app/styles/landing.scss */
+#mobile-nav {
+  display: none;
+  width: 100%;
+  background: rgba(198, 198, 198, 0.9);
+  position: absolute;
+  z-index: 999;
+  top: 0;
+}
+
+/* line 175, ../../app/styles/landing.scss */
+#mobile-nav .navigationButton img {
+  margin: 15px 0px;
+}
+
+/* line 179, ../../app/styles/landing.scss */
+#mobile-nav .navigationButton img:hover {
+  cursor: pointer;
+}
+
+/* line 183, ../../app/styles/landing.scss */
+#mobile-nav .navigationContent a {
+  display: block;
+  color: #fff;
+  padding: 15px 0px;
+  border-bottom: 1px solid #bebebe;
+}
+
+/* line 190, ../../app/styles/landing.scss */
+#mobile-nav .navigationContent li:last-child a {
+  border-bottom: 1px solid transparent;
+}
+
+/* line 194, ../../app/styles/landing.scss */
+#mobile-nav .navigationContent a:hover {
+  color: #a1a1a1;
+}
+
+/* Hero */
+/* line 200, ../../app/styles/landing.scss */
+.hero {
+  margin-top: 35px;
+  /*background: url('../images/hero-hardware.jpg') no-repeat top right;*/
+  background: #4A5362;
+}
+
+/* line 206, ../../app/styles/landing.scss */
+.hero.container h3 {
+  margin-top: 80px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* line 212, ../../app/styles/landing.scss */
+.device-container {
+  text-align: center;
+}
+
+/* line 216, ../../app/styles/landing.scss */
+.device-container img {
+  vertical-align: bottom;
+}
+
+/* line 220, ../../app/styles/landing.scss */
+.hero img {
+  width: 100%;
+}
+
+/* line 224, ../../app/styles/landing.scss */
+.brand_select {
+  position: absolute;
+  margin: 0 auto;
+  width: 240px;
+  background: rgba(0, 0, 0, 0.29);
+  border-radius: 20px;
+  left: 50%;
+  margin-left: -120px;
+  height: 76px;
+  margin-top: -76px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 18px 10px;
+}
+
+/* line 239, ../../app/styles/landing.scss */
+.brand_select li {
+  float: left;
+  list-style: none;
+  margin-left: 14px;
+  margin-right: 28px;
+}
+
+/* line 246, ../../app/styles/landing.scss */
+li.brand_windows {
+  /* Height Fix */
+  margin-top: 5px;
+  margin-right: 0px;
+}
+
+/* line 252, ../../app/styles/landing.scss */
+.brand_select img {
+  width: 35px;
+  float: left;
+  list-style: none;
+}
+
+/* line 258, ../../app/styles/landing.scss */
+.action {
+  /*background: -webkit-linear-gradient(left, #84CFA6 0%, #65AEA9 100%);*/
+  /*background: -moz-linear-gradient(right, #84CFA6 0%, #65AEA9 100%);*/
+  /*background: linear-gradient(to right, #84CFA6 0%, #65AEA9 100%);*/
+  margin-top: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+/* line 268, ../../app/styles/landing.scss */
+.action li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+/* line 273, ../../app/styles/landing.scss */
+.action li:last-of-type {
+  margin-right: 0px;
+}
+
+/* Section 1 */
+/* line 279, ../../app/styles/landing.scss */
+#section1 {
+  background: #4A5362;
+  color: #fff;
+}
+
+/* line 284, ../../app/styles/landing.scss */
+#section1 h2 {
+  text-align: center;
+  margin: 50px 0px 40px 0px;
+}
+
+/* line 289, ../../app/styles/landing.scss */
+#section1 a {
+  display: table-cell;
+  vertical-align: middle;
+  width: 280px;
+  height: 50px;
+  background: #3E424B;
+  color: #8694A1;
+}
+
+/* Section 2 */
+/* line 300, ../../app/styles/landing.scss */
+#section2 {
+  background-image: linear-gradient(90deg, #7A57A1, #6D57AC);
+  box-shadow: inset 0px 10px rgba(69, 82, 99, 0.5);
+  color: #FFF;
+}
+
+/* line 306, ../../app/styles/landing.scss */
+#section2 .content-box {
+  padding: 0px 30px;
+}
+
+/* Section 3 */
+/* line 312, ../../app/styles/landing.scss */
+#section3 {
+  background-image: linear-gradient(90deg, #49cca6, #1fb4a9);
+  box-shadow: inset 0px 10px rgba(69, 82, 99, 0.2);
+  /*   height: 350px; */
+  color: #fff;
+}
+
+/* line 319, ../../app/styles/landing.scss */
+.static > span {
+  font-size: 36px;
+}
+
+/* line 323, ../../app/styles/landing.scss */
+.static.container {
+  z-index: 2;
+}
+
+/* line 328, ../../app/styles/landing.scss */
+#section3 h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/* line 333, ../../app/styles/landing.scss */
+#section3 h1 {
+  font-size: 5em;
+  font-weight: 500;
+  margin-top: -30px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+/* line 341, ../../app/styles/landing.scss */
+.links_sent_bg {
+  background-image: url("/images/links_sent.d62b8464.png");
+  width: 100%;
+  background-size: 70%;
+  background-position: 10px -2px;
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+/* Section 4 */
+/* line 354, ../../app/styles/landing.scss */
+#section4 {
+  background: #4A5362;
+  color: white;
+  box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+}
+
+/* line 361, ../../app/styles/landing.scss */
+#section4 .text {
+  background: #3A404A;
+  border: 1px solid #FA984F;
+  color: #FA984F;
+}
+
+/* =Subscribe
+-------------------------------------------------------------- */
+/* line 371, ../../app/styles/landing.scss */
+.subscribe {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+/* line 377, ../../app/styles/landing.scss */
+.subscribe .sub-heading {
+  margin-bottom: 20px;
+}
+
+/* line 381, ../../app/styles/landing.scss */
+.subscribe input.text {
+  display: inline-block;
+  outline: none;
+  -webkit-appearance: none;
+  width: 340px;
+  padding: 15px 0px 15px 15px;
+  background: white;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font: 12px "Roboto";
+  color: #3498d9;
+  margin-bottom: 20px;
+}
+
+/* line 398, ../../app/styles/landing.scss */
+.subscribe input.submit {
+  border: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  text-decoration: none;
+  -webkit-appearance: none;
+  font: 22px "Roboto";
+  font-weight: 300;
+  color: #3498d9;
+  margin-left: 10px;
+  padding-right: 40px;
+  -moz-transition: color .2s;
+  -o-transition: color .2s;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+/* line 418, ../../app/styles/landing.scss */
+.subscribe input.submit:hover {
+  color: #555;
+  background-position: bottom right;
+}
+
+/* line 423, ../../app/styles/landing.scss */
+#subscribe {
+  cursor: pointer;
+  text-rendering: geometricprecision;
+  text-decoration: none;
+  color: white !important;
+  background: #FA984F !important;
+}
+
+/* line 431, ../../app/styles/landing.scss */
+.social-list {
+  padding-top: 20px;
+}
+
+/* line 432, ../../app/styles/landing.scss */
+.social-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 436, ../../app/styles/landing.scss */
+.social-list li:last-of-type {
+  margin-right: 0px;
+}
+
+/* line 440, ../../app/styles/landing.scss */
+.social-list a {
+  -webkit-transition: all 0.33s;
+  -moz-transition: all 0.33s;
+  -o-transition: all 0.33s;
+  -ms-transition: all 0.33s;
+  transition: all 0.33s;
+}
+
+/* line 448, ../../app/styles/landing.scss */
+.social-list a:hover {
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  /* IE 8 */
+  filter: alpha(opacity=40);
+  -webkit-transition: all 0.33s;
+  -moz-transition: all 0.33s;
+  -o-transition: all 0.33s;
+  -ms-transition: all 0.33s;
+  transition: all 0.33s;
+}
+
+/* line 459, ../../app/styles/landing.scss */
+.notification.columns {
+  display: none;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 460, ../../app/styles/landing.scss */
+.notification p {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 461, ../../app/styles/landing.scss */
+.notification.success {
+  border: 1px solid #b3dc82;
+}
+
+/* line 462, ../../app/styles/landing.scss */
+.notification.success p {
+  color: #5f9025;
+}
+
+/* line 463, ../../app/styles/landing.scss */
+.notification.error {
+  border: 1px solid #fbc4c4;
+}
+
+/* line 464, ../../app/styles/landing.scss */
+.notification.error p {
+  color: #de5959;
+}
+
+/* line 465, ../../app/styles/landing.scss */
+.notification .close {
+  float: right;
+  text-indent: -999em;
+  width: 9px;
+  height: 9px;
+  margin-top: 10px;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+/* line 471, ../../app/styles/landing.scss */
+footer {
+  width: 100%;
+  background: #3E424B;
+  padding: 40px 0px 20px;
+  text-align: center;
+  color: #607387;
+}
+
+/* line 479, ../../app/styles/landing.scss */
+.footer-author {
+  float: left;
+  text-align: left;
+}
+
+/* line 484, ../../app/styles/landing.scss */
+p.us {
+  color: white;
+  margin-top: -16px;
+}
+
+/* line 489, ../../app/styles/landing.scss */
+.footer-author img {
+  float: left;
+}
+
+/* line 492, ../../app/styles/landing.scss */
+.footer-copyright p {
+  margin: 0px 0px 8px;
+}
+
+/* line 496, ../../app/styles/landing.scss */
+.footer-copyright {
+  float: right;
+  text-align: right;
+  margin-top: 6px;
+}
+
+/* line 502, ../../app/styles/landing.scss */
+.footer-copyright p {
+  margin: 0px 0px -7px;
+}
+
+/* line 506, ../../app/styles/landing.scss */
+.footer-action {
+  padding-bottom: 15px;
+}
+
+/* line 507, ../../app/styles/landing.scss */
+.footer-action li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* line 508, ../../app/styles/landing.scss */
+.footer-action li:last-of-type {
+  margin-right: 0px;
+}
+
+/* line 510, ../../app/styles/landing.scss */
+.copyright {
+  font-size: .9em;
+  color: #607387;
+}
+
+/* =Responsive
+-------------------------------------------------------------- */
+/* Tablet Landscape */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 518, ../../app/styles/landing.scss */
+  body {
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  /* line 519, ../../app/styles/landing.scss */
+  .bx-prev, .bx-next {
+    display: none !important;
+  }
+}
+/* Smaller than 960px */
+@media only screen and (max-width: 959px) {
+  /* line 524, ../../app/styles/landing.scss */
+  h1 {
+    margin-top: 0px;
+    font-size: 3em;
+  }
+
+  /* line 525, ../../app/styles/landing.scss */
+  h2 {
+    font-size: 2.5em;
+  }
+
+  /* line 526, ../../app/styles/landing.scss */
+  #mobile-nav {
+    display: block;
+  }
+
+  /* line 527, ../../app/styles/landing.scss */
+  header {
+    position: static;
+    margin-top: 47px;
+  }
+
+  /* line 528, ../../app/styles/landing.scss */
+  #navigation {
+    display: none;
+  }
+
+  /* line 529, ../../app/styles/landing.scss */
+  #logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 530, ../../app/styles/landing.scss */
+  .bx-prev, .bx-next {
+    display: none !important;
+  }
+
+  /* line 532, ../../app/styles/landing.scss */
+  #style-switch {
+    display: none;
+  }
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 537, ../../app/styles/landing.scss */
+  .hero {
+    background-size: 100%;
+  }
+
+  /* line 538, ../../app/styles/landing.scss */
+  .static {
+    padding-top: 70px;
+    height: 400px;
+  }
+
+  /* line 539, ../../app/styles/landing.scss */
+  .sidephone-small {
+    width: 200px;
+    left: 12px;
+  }
+
+  /* line 540, ../../app/styles/landing.scss */
+  .sidephone-big {
+    width: 200px;
+    left: 130px;
+  }
+
+  /* line 541, ../../app/styles/landing.scss */
+  .static-phone {
+    width: 150px;
+    bottom: 0px;
+    right: 200px;
+  }
+
+  /* line 542, ../../app/styles/landing.scss */
+  .static-tablet {
+    width: 300px;
+  }
+
+  /* line 543, ../../app/styles/landing.scss */
+  .detail {
+    min-height: 542px;
+  }
+
+  /* line 544, ../../app/styles/landing.scss */
+  .loupe {
+    display: none;
+  }
+
+  /* line 545, ../../app/styles/landing.scss */
+  .loupe-gallery {
+    margin-left: 100px;
+  }
+
+  /* line 546, ../../app/styles/landing.scss */
+  .gallery-content {
+    width: 80%;
+    height: auto;
+  }
+
+  /* line 547, ../../app/styles/landing.scss */
+  .loupe-still {
+    width: 120%;
+    height: auto;
+    top: -20px;
+    margin-left: -330px;
+  }
+
+  /* line 548, ../../app/styles/landing.scss */
+  .screenshot img {
+    width: 186px;
+  }
+
+  /* line 549, ../../app/styles/landing.scss */
+  .gallery-bxslider li .screenshot:first-of-type img {
+    float: left;
+    margin-left: 20px;
+  }
+
+  /* line 550, ../../app/styles/landing.scss */
+  .gallery-bxslider li .screenshot:last-of-type img {
+    float: left;
+    margin-left: 30px;
+  }
+
+  /* line 551, ../../app/styles/landing.scss */
+  .bx-wrapper {
+    background-size: 100%;
+    background-position: bottom center;
+  }
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 556, ../../app/styles/landing.scss */
+  .bx-wrapper {
+    padding-top: 85px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  /* line 560, ../../app/styles/landing.scss */
+  .screenshot {
+    margin-bottom: 120px;
+  }
+
+  /* line 561, ../../app/styles/landing.scss */
+  .screenshot:last-child {
+    margin-bottom: 0px;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 566, ../../app/styles/landing.scss */
+  .hero {
+    background-size: 100%;
+    background-position: center 70px;
+  }
+
+  /* line 570, ../../app/styles/landing.scss */
+  .action li {
+    margin-right: 15px;
+  }
+
+  /* line 573, ../../app/styles/landing.scss */
+  .static {
+    min-height: 730px;
+    padding-top: 40px;
+  }
+
+  /* line 577, ../../app/styles/landing.scss */
+  .sidephone-small {
+    left: 12px;
+  }
+
+  /* line 580, ../../app/styles/landing.scss */
+  .static-phone {
+    bottom: 0px;
+  }
+
+  /* line 583, ../../app/styles/landing.scss */
+  .detail {
+    min-height: 480px;
+  }
+
+  /* line 586, ../../app/styles/landing.scss */
+  .loupe {
+    display: none;
+  }
+
+  /* line 589, ../../app/styles/landing.scss */
+  .loupe-gallery {
+    margin-left: 70px;
+    margin-top: 50px;
+  }
+
+  /* line 593, ../../app/styles/landing.scss */
+  .gallery-content {
+    width: 300px;
+    height: auto;
+  }
+
+  /* line 597, ../../app/styles/landing.scss */
+  .loupe-still {
+    width: 490px;
+    height: auto;
+    top: -15px;
+    margin-left: -249px;
+  }
+
+  /* line 604, ../../app/styles/landing.scss */
+  .footer-author {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) and (max-width: 479px) {
+  /* line 612, ../../app/styles/landing.scss */
+  .hero {
+    background-size: 110%;
+    background-position: center 100px;
+  }
+
+  /* line 616, ../../app/styles/landing.scss */
+  .action {
+    margin-top: 140px;
+  }
+
+  /* line 619, ../../app/styles/landing.scss */
+  .action li {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  /* line 623, ../../app/styles/landing.scss */
+  .action li:last-of-type {
+    margin-bottom: 0px;
+  }
+
+  /* line 626, ../../app/styles/landing.scss */
+  .static {
+    min-height: 660px;
+    padding-top: 40px;
+  }
+
+  /* line 630, ../../app/styles/landing.scss */
+  .sidephone-small {
+    width: 170px;
+    left: 12px;
+  }
+
+  /* line 634, ../../app/styles/landing.scss */
+  .sidephone-big {
+    width: 170px;
+    left: 130px;
+  }
+
+  /* line 638, ../../app/styles/landing.scss */
+  .static-phone {
+    width: 130px;
+    bottom: 0px;
+    right: 150px;
+  }
+
+  /* line 643, ../../app/styles/landing.scss */
+  .static-tablet {
+    width: 260px;
+  }
+
+  /* line 646, ../../app/styles/landing.scss */
+  .detail {
+    min-height: 496px;
+  }
+
+  /* line 649, ../../app/styles/landing.scss */
+  .loupe {
+    display: none;
+  }
+
+  /* line 652, ../../app/styles/landing.scss */
+  .loupe-gallery {
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+
+  /* line 656, ../../app/styles/landing.scss */
+  .gallery-content {
+    width: 220px;
+    height: auto;
+  }
+
+  /* line 660, ../../app/styles/landing.scss */
+  .loupe-still {
+    width: 360px;
+    height: auto;
+    top: -10px;
+    margin-left: -179px;
+  }
+
+  /* line 666, ../../app/styles/landing.scss */
+  .subscribe input.text {
+    width: 300px;
+  }
+}
