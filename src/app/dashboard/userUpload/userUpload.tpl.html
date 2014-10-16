@@ -1,0 +1,60 @@
+<div class="progress-background">
+    <progressbar max="max" value="dynamic"></progressbar>
+</div>
+
+<div class="outer-container">
+
+    <div class="file-preview">
+
+    </div>
+
+    <div class="middle-section">
+        <div class="file-title">
+            <span class="file-name">{{file.name}}</span><span class="file-extension">.{{file.extension}}</span>
+        </div>
+
+        <div class="file-info">
+            <div class="downloads file-info-bit">
+                <i class="fa fa-download fa-lg"></i>
+                <ng-pluralize class="download-text"
+                              ng-show="file.maxDownloads < 0"
+                              count="file.numDownloads"
+                              when="{'0':'0 times',
+                                     '1':'1 time',
+                                     'other':'{} times'}">
+                </ng-pluralize>
+                <span ng-hide="file.maxDownloads < 0" class="download-text">{{file.numDownloads}} of {{file.maxDownloads}}</span>
+            </div>
+
+            <password-tool has-password="!!file.password"></password-tool>
+
+            <!--<div class="password file-info-bit">-->
+            <!--<i ng-show="!!file.password" class="fa fa-lock pw-icon"></i>-->
+            <!--<i ng-show="!file.password" class="fa fa-unlock pw-icon"></i>-->
+            <!--<i ng-show="!!file.password" ng-repeat="i in getNumPasswordBubbles() track by $index" class="fa fa-circle"></i>-->
+            <!--<span ng-show="!file.password">no password</span>-->
+            <!--</div>-->
+
+            <div class="time file-info-bit">
+                <i class="fa fa-clock-o"></i>
+                <span am-time-ago="date"></span>
+            </div>
+        </div>
+
+        <div class="file-size">
+            <span ng-show="!newFile || (newFile && !!doneUploading)">{{file.size | bytes}}</span>
+            <span ng-show="(newFile && !doneUploading)">{{percentUploaded}}% uploaded</span>
+        </div>
+    </div>
+
+
+    <div class="right-ops">
+        <div class="delete">
+            <i class="fa fa-trash fa-lg"></i>
+        </div>
+
+        <div class="copy">
+            <p>copy</p>
+        </div>
+    </div>
+</div>

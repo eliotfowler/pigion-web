@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="pigionWebApp" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+      <meta charset="UTF-8">
+      <meta name="description" content="Pigion. The simplest share anything tool.">
+      <meta name="keywords" content="pigion, pigeon, share, utility, simple, amazing, beautiful, open source, free">
+      <meta name="author" content="Eliot Fowler and Andrew Acree">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="vendor/angular-hotkeys/build/hotkeys.min.css" />
+
+      <link rel="stylesheet" type="text/css" href="assets/main.css" />
+      <link rel="stylesheet" type="text/css" href="assets/reset.css" />
+      <link rel="stylesheet" type="text/css" href="assets/login.css" />
+      <link href="assets/grid.min.css" rel="stylesheet"/>
+
+    <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  </head>
+  <body>
+  <div ui-view="main"></div>
+  <div class="bottom_color"></div>
+  </body>
+</html>
