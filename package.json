@@ -12,7 +12,9 @@
     "type": "git",
     "url": "git@github.com:eliotfowler/pigion-web.git"
   },
-  "dependencies": {},
+  "dependencies": {
+     "express": "~4.9.x"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-less": "~0.11.0",
@@ -34,6 +36,5 @@
     "karma-coffee-preprocessor": "^0.2.1",
     "karma": "^0.12.9",
     "grunt-contrib-compass": "^0.7.2", 
-    "express": "~4.9.x"
   }
 }
