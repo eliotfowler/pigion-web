@@ -90,7 +90,7 @@ angular.module(
 
         $scope.files.unshift(newFile);
         $scope.upload = $upload.upload({
-          url: ENV.apiEndpoint + '/files/upload',
+          url: 'https://pigion.herokuapp.com' + '/files/upload',
           //method: 'POST' or 'PUT',
           headers: {'X-Auth-Token': UserService.getUserToken()},
           file: file

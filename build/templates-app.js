@@ -1,18 +1,16 @@
-angular.module('templates-app', ['dashboard/dashboard.tpl.html', 'dashboard/passwordTool/passwordTool.tpl.html', 'dashboard/userUpload/userUpload.tpl.html', 'landing/landing.tpl.html', 'login/login.tpl.html']);
+angular.module('templates-app', ['dashboard/dashboard.tpl.html', 'dashboard/passwordTool/passwordTool.tpl.html', 'dashboard/userUpload/userUpload.tpl.html', 'download/download.tpl.html', 'landing/landing.tpl.html', 'login/login.tpl.html']);
 
 angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("dashboard/dashboard.tpl.html",
     "<link href=\"assets/dashboard.css\" rel=\"stylesheet\"/>\n" +
     "\n" +
-    "<div class=\"drop-zone ng-scope\" ng-file-drop=\"onFileSelect($files)\" ng-file-drag-over-class=\"drop-hover\" style=\"display: none;\">\n" +
+    "<div class=\"drop-zone ng-scope\" ng-file-drop=\"onFileSelect($files)\" ng-file-drag-over-class=\"drop-hover\">\n" +
     "    <span>drop files here</span>\n" +
     "\n" +
     "    <a href=\"javascript:;\" class=\"animatedBorderBox\">\n" +
     "        <div class=\"background\"></div>\n" +
     "        <div class=\"content\">HOVER</div>\n" +
     "    </a>\n" +
-    "\n" +
-    "\n" +
     "</div>\n" +
     "\n" +
     "<nav class=\"navbar navbar-default\" role=\"navigation\">\n" +
@@ -161,6 +159,11 @@ angular.module("dashboard/userUpload/userUpload.tpl.html", []).run(["$templateCa
     "        </div>\n" +
     "    </div>\n" +
     "</div>");
+}]);
+
+angular.module("download/download.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("download/download.tpl.html",
+    "");
 }]);
 
 angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($templateCache) {

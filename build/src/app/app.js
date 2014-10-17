@@ -12,8 +12,9 @@ angular.module('pigionWebApp', [
   'ui.router'
 ])
 
-  .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
+  .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
     $urlRouterProvider.otherwise( '/' );
+    $locationProvider.html5Mode(true);
   })
 
   .run( function run () {

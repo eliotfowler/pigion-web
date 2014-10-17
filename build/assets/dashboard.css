@@ -125,7 +125,7 @@ ul.horizontal li {
 
 /* line 108, ../../src/styles/dashboard.scss */
 .drop-zone span {
-  display: none;
+  background: white;
   height: 200px;
   width: 200px;
   padding-top: 90px;
