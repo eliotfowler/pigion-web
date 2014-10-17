@@ -1,0 +1,29 @@
+<link href="assets/download.css" rel="stylesheet"/>
+
+<div class="pigion-ad">
+    <img src="assets/images/logo_circ.png" class="logo">
+
+    <div class="tagline">
+        <span>The last share tool you</span>
+        <span>will ever need</span>
+    </div>
+
+    <div class="learn-more">
+        <a type="button" href="http://pigion-web.herokuapp.com" class="btn btn-lg btn-success">Learn More</a>
+    </div>
+</div>
+
+<div class="file-container">
+    <div class="file-type-container">
+
+    </div>
+
+    <div class="file-info">
+        <span class="file-name">{{fileName}}</span><span class="file-extension">.{{fileExtension}}</span>
+        <span class="file-size">{{fileInfo.contentSize | bytes}}</span>
+    </div>
+
+    <div class="file-download">
+        <a type="button" ng-href={{fileInfo.fullUrl}} class="btn btn-lg btn-success">Download</a>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+/* line 1, ../../src/styles/download.scss */
+.pigion-ad {
+  position: absolute;
+  height: 400px;
+  width: 50%;
+  left: 0;
+  margin-top: 200px;
+  background: #424a5b;
+}
+
+/* line 10, ../../src/styles/download.scss */
+.pigion-ad img {
+  width: 66px;
+  margin: 50px auto 30px auto;
+  display: block;
+}
+
+/* line 16, ../../src/styles/download.scss */
+.pigion-ad .tagline {
+  width: 160px;
+  margin: 0 auto;
+  display: block;
+  color: #66aba0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 25, ../../src/styles/download.scss */
+.pigion-ad .learn-more {
+  width: 130px;
+  margin: 50px auto 0px auto;
+}
+
+/* line 30, ../../src/styles/download.scss */
+.file-container {
+  position: absolute;
+  height: 400px;
+  width: 50%;
+  left: 50%;
+  margin-top: 200px;
+  background: rgba(66, 74, 91, 0.75);
+  color: white;
+}
+
+/* line 40, ../../src/styles/download.scss */
+.file-container .file-type-container {
+  background: #3d444f;
+  width: 220px;
+  height: 220px;
+  margin: 40px auto 10px auto;
+}
+
+/* line 47, ../../src/styles/download.scss */
+.file-container .file-info {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 53, ../../src/styles/download.scss */
+.file-container .file-info .file-name {
+  color: white;
+  font-size: 20px;
+}
+
+/* line 58, ../../src/styles/download.scss */
+.file-container .file-info .file-extension {
+  color: #808080;
+  font-size: 20px;
+}
+
+/* line 63, ../../src/styles/download.scss */
+.file-container .file-info .file-size {
+  font-size: 14px;
+  color: #808080;
+}
+
+/* line 68, ../../src/styles/download.scss */
+.file-container .file-download {
+  width: 120px;
+  margin: 0 auto;
+  color: black;
+}
+
+/* line 74, ../../src/styles/download.scss */
+.file-container .file-download a {
+  width: 120px;
+  margin-top: 20px;
+}

@@ -156,7 +156,35 @@ angular.module("dashboard/userUpload/userUpload.tpl.html", []).run(["$templateCa
 
 angular.module("download/download.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("download/download.tpl.html",
-    "");
+    "<link href=\"assets/download.css\" rel=\"stylesheet\"/>\n" +
+    "\n" +
+    "<div class=\"pigion-ad\">\n" +
+    "    <img src=\"assets/images/logo_circ.png\" class=\"logo\">\n" +
+    "\n" +
+    "    <div class=\"tagline\">\n" +
+    "        <span>The last share tool you</span>\n" +
+    "        <span>will ever need</span>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div class=\"learn-more\">\n" +
+    "        <a type=\"button\" href=\"http://pigion-web.herokuapp.com\" class=\"btn btn-lg btn-success\">Learn More</a>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"file-container\">\n" +
+    "    <div class=\"file-type-container\">\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div class=\"file-info\">\n" +
+    "        <span class=\"file-name\">{{fileName}}</span><span class=\"file-extension\">.{{fileExtension}}</span>\n" +
+    "        <span class=\"file-size\">{{fileInfo.contentSize | bytes}}</span>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div class=\"file-download\">\n" +
+    "        <a type=\"button\" ng-href={{fileInfo.fullUrl}} class=\"btn btn-lg btn-success\">Download</a>\n" +
+    "    </div>\n" +
+    "</div>");
 }]);
 
 angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($templateCache) {
