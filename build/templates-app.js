@@ -129,13 +129,6 @@ angular.module("dashboard/userUpload/userUpload.tpl.html", []).run(["$templateCa
     "\n" +
     "            <password-tool has-password=\"!!file.password\"></password-tool>\n" +
     "\n" +
-    "            <!--<div class=\"password file-info-bit\">-->\n" +
-    "            <!--<i ng-show=\"!!file.password\" class=\"fa fa-lock pw-icon\"></i>-->\n" +
-    "            <!--<i ng-show=\"!file.password\" class=\"fa fa-unlock pw-icon\"></i>-->\n" +
-    "            <!--<i ng-show=\"!!file.password\" ng-repeat=\"i in getNumPasswordBubbles() track by $index\" class=\"fa fa-circle\"></i>-->\n" +
-    "            <!--<span ng-show=\"!file.password\">no password</span>-->\n" +
-    "            <!--</div>-->\n" +
-    "\n" +
     "            <div class=\"time file-info-bit\">\n" +
     "                <i class=\"fa fa-clock-o\"></i>\n" +
     "                <span am-time-ago=\"date\"></span>\n" +

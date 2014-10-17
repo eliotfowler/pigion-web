@@ -6,6 +6,7 @@ angular.module('pigionWebApp', [
   'restangular',
   'angularFileUpload',
   'ngCookies',
+  'ui.bootstrap',
   'pigionWebApp.landing',
   'pigionWebApp.login',
   'pigionWebApp.dashboard',

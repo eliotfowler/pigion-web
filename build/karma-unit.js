@@ -9,9 +9,11 @@ module.exports = function ( karma ) {
      * This is the list of file patterns to load into the browser during testing.
      */
     files: [
+      'vendor/jquery/dist/jquery.min.js',
+      'vendor/ng-file-upload-shim/angular-file-upload-shim.js',
       'vendor/angular/angular.js',
+      'vendor/bootstrap/dist/js/bootstrap.min.js',
       'vendor/angular-cookies/angular-cookies.js',
-      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js',
       'vendor/angular-ui-router/release/angular-ui-router.js',
       'vendor/angular-hotkeys/build/hotkeys.min.js',
@@ -20,6 +22,7 @@ module.exports = function ( karma ) {
       'vendor/ng-file-upload/angular-file-upload.js',
       'vendor/lodash/dist/lodash.compat.js',
       'vendor/restangular/dist/restangular.js',
+      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'build/templates-app.js',
       'build/templates-common.js',
       'vendor/angular-mocks/angular-mocks.js',
