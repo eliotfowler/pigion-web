@@ -3,16 +3,11 @@ angular.module('services.userService', [])
     var userToken;
 
     this.saveUserToken = function(token) {
-      console.log('saving token ' + token);
       userToken = token;
       $cookieStore.put('userToken', token);
-      var test = $cookieStore.get('userToken');
-      console.log('test', test);
     };
 
     this.getUserToken = function () {
-      console.log('getting userToken ' + userToken);
-      console.log('cookie token:' + $cookieStore.get('userToken'));
       if(userToken) {
         return userToken;
       } else {
