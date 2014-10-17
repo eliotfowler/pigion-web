@@ -17,8 +17,6 @@ angular.module(
 })
 
 .controller( 'LoginCtrl', function LoginCtrl( $scope, Restangular, $location, UserService ) {
-        Restangular.configuration.baseUrl = 'https://pigion.herokuapp.com';
-
         $scope.login = function login() {
             Restangular.all('auth').all('api').all('authenticate').all('userpass').post({
                 username: $scope.username,

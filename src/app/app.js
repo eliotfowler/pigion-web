@@ -10,12 +10,14 @@ angular.module('pigionWebApp', [
   'pigionWebApp.landing',
   'pigionWebApp.login',
   'pigionWebApp.dashboard',
+  'pigionWebApp.download',
   'ui.router'
 ])
 
-  .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
+  .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, RestangularProvider ) {
     $urlRouterProvider.otherwise( '/' );
     $locationProvider.html5Mode(true);
+    RestangularProvider.setBaseUrl('https://pigion.herokuapp.com');
   })
 
   .run( function run () {
