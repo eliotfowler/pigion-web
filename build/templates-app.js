@@ -4,6 +4,7 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
   $templateCache.put("dashboard/dashboard.tpl.html",
     "<link href=\"assets/dashboard.css\" rel=\"stylesheet\"/>\n" +
     "\n" +
+    "<!--\n" +
     "<div class=\"drop-zone ng-scope\" ng-file-drop=\"onFileSelect($files)\" ng-file-drag-over-class=\"drop-hover\">\n" +
     "    <span>drop files here</span>\n" +
     "\n" +
@@ -12,6 +13,7 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
     "        <div class=\"content\">HOVER</div>\n" +
     "    </a>\n" +
     "</div>\n" +
+    "-->\n" +
     "\n" +
     "<nav class=\"navbar navbar-default\" role=\"navigation\">\n" +
     "    <div class=\"container container-fluid\">\n" +
@@ -109,12 +111,12 @@ angular.module("dashboard/userUpload/userUpload.tpl.html", []).run(["$templateCa
     "\n" +
     "    </div>\n" +
     "\n" +
-    "    <div class=\"middle-section\">\n" +
-    "        <div class=\"file-title\">\n" +
+    "    <div class=\"middle-section col-sm-8\">\n" +
+    "        <div class=\"row col-sm-12 file-title\">\n" +
     "            <span class=\"file-name\">{{file.name}}</span><span class=\"file-extension\">.{{file.extension}}</span>\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"file-info\">\n" +
+    "        <div class=\"row col-sm-12 file-info\">\n" +
     "            <div class=\"downloads file-info-bit\">\n" +
     "                <i class=\"fa fa-download fa-lg\"></i>\n" +
     "                <ng-pluralize class=\"download-text\"\n" +
@@ -129,13 +131,13 @@ angular.module("dashboard/userUpload/userUpload.tpl.html", []).run(["$templateCa
     "\n" +
     "            <password-tool has-password=\"!!file.password\"></password-tool>\n" +
     "\n" +
-    "            <div class=\"time file-info-bit\">\n" +
+    "            <div class=\" time file-info-bit\">\n" +
     "                <i class=\"fa fa-clock-o\"></i>\n" +
     "                <span am-time-ago=\"date\"></span>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"file-size\">\n" +
+    "        <div class=\"row col-sm-12 file-size\">\n" +
     "            <span ng-show=\"!newFile || (newFile && !!doneUploading)\">{{file.size | bytes}}</span>\n" +
     "            <span ng-show=\"(newFile && !doneUploading)\">{{percentUploaded}}% uploaded</span>\n" +
     "        </div>\n" +
@@ -158,8 +160,8 @@ angular.module("download/download.tpl.html", []).run(["$templateCache", function
   $templateCache.put("download/download.tpl.html",
     "<link href=\"assets/download.css\" rel=\"stylesheet\"/>\n" +
     "\n" +
-    "<div class=\"pigion-ad\">\n" +
-    "    <img src=\"assets/images/logo_circ.png\" class=\"logo\">\n" +
+    "<div class=\"pigion-ad col-xs-12 col-sm-6\">\n" +
+    "    <img src=\"assets/images/p_download_logo.png\" class=\"logo\">\n" +
     "\n" +
     "    <div class=\"tagline\">\n" +
     "        <span>The last share tool you</span>\n" +
@@ -167,11 +169,11 @@ angular.module("download/download.tpl.html", []).run(["$templateCache", function
     "    </div>\n" +
     "\n" +
     "    <div class=\"learn-more\">\n" +
-    "        <a type=\"button\" href=\"http://pigion-web.herokuapp.com\" class=\"btn btn-lg btn-success\">Learn More</a>\n" +
+    "        <a type=\"button\" href=\"http://pigion-web.herokuapp.com\" class=\"btn btn-lg btn-success download\">Learn More</a>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<div class=\"file-container\">\n" +
+    "<div class=\"file-container col-xs-12 col-sm-6\">\n" +
     "    <div class=\"file-type-container\">\n" +
     "\n" +
     "    </div>\n" +
@@ -182,7 +184,7 @@ angular.module("download/download.tpl.html", []).run(["$templateCache", function
     "    </div>\n" +
     "\n" +
     "    <div class=\"file-download\">\n" +
-    "        <a type=\"button\" ng-href={{fileInfo.fullUrl}} class=\"btn btn-lg btn-success\">Download</a>\n" +
+    "        <a type=\"button\" ng-href={{fileInfo.fullUrl}} class=\"btn btn-lg btn-success download\">Download</a>\n" +
     "    </div>\n" +
     "</div>");
 }]);
@@ -309,11 +311,11 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
     "\n" +
     "    <div class=\"content container\">\n" +
     "        <div class=\"row\">\n" +
-    "            <div class=\"col-sm-5\">\n" +
+    "            <div class=\"col-sm-6\">\n" +
     "                <h3>Host your own data, but let us carry it</h3>\n" +
     "            </div>\n" +
     "\n" +
-    "            <div class=\"col-sm-4 col-sm-offset-3\">\n" +
+    "            <div class=\"col-sm-4 col-sm-offset-2\">\n" +
     "                <h1>20,476</h1>\n" +
     "                <span>Pigion links sent</span>\n" +
     "            </div>\n" +
@@ -371,8 +373,8 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
     "        <div class=\"footer-copyright col-md-6\">\n" +
     "            <p class=\"copyright\">© 2014 Just Cause. All Rights Reserved. </p>\n" +
     "            <ul class=\"footer-action\">\n" +
-    "                <li><a class=\"button small\" href=\"#\">Privacy Policy</i></a></li>\n" +
-    "                <li><a id=\"top\" class=\"button small\" href=\"#\">Terms of Service</a></li>\n" +
+    "                <li><a class=\"small\" href=\"#\">Privacy Policy</i></a></li>\n" +
+    "                <li><a id=\"top\" class=\"small\" href=\"#\">Terms of Service</a></li>\n" +
     "            </ul>\n" +
     "        </div>\n" +
     "    </div>\n" +

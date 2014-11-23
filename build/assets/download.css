@@ -1,48 +1,45 @@
 /* line 1, ../../src/styles/download.scss */
 .pigion-ad {
-  position: absolute;
-  height: 400px;
-  width: 50%;
-  left: 0;
-  margin-top: 200px;
-  background: #424a5b;
+  background: rgba(66, 74, 91, 0.98);
+  box-shadow: Inset 0px 0px 0px 1px #3a404a;
+  margin-top: 10%;
+  min-height: 400px;
 }
 
-/* line 10, ../../src/styles/download.scss */
+/* line 8, ../../src/styles/download.scss */
 .pigion-ad img {
-  width: 66px;
+  width: 100px;
   margin: 50px auto 30px auto;
   display: block;
 }
 
-/* line 16, ../../src/styles/download.scss */
+/* line 14, ../../src/styles/download.scss */
 .pigion-ad .tagline {
-  width: 160px;
+  width: 40%;
   margin: 0 auto;
   display: block;
-  color: #66aba0;
+  color: #23b7a9;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 
-/* line 25, ../../src/styles/download.scss */
+/* line 24, ../../src/styles/download.scss */
 .pigion-ad .learn-more {
   width: 130px;
   margin: 50px auto 0px auto;
 }
 
-/* line 30, ../../src/styles/download.scss */
+/* line 29, ../../src/styles/download.scss */
 .file-container {
-  position: absolute;
-  height: 400px;
-  width: 50%;
-  left: 50%;
-  margin-top: 200px;
-  background: rgba(66, 74, 91, 0.75);
+  background: rgba(66, 74, 91, 0.81);
   color: white;
+  box-shadow: Inset -1px 0px 0px 1px #3a404a;
+  margin-top: 10%;
+  min-height: 400px;
 }
 
-/* line 40, ../../src/styles/download.scss */
+/* line 37, ../../src/styles/download.scss */
 .file-container .file-type-container {
   background: #3d444f;
   width: 220px;
@@ -50,40 +47,63 @@
   margin: 40px auto 10px auto;
 }
 
-/* line 47, ../../src/styles/download.scss */
+/* line 44, ../../src/styles/download.scss */
 .file-container .file-info {
   width: 320px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 53, ../../src/styles/download.scss */
+/* line 50, ../../src/styles/download.scss */
 .file-container .file-info .file-name {
   color: white;
   font-size: 20px;
 }
 
-/* line 58, ../../src/styles/download.scss */
+/* line 55, ../../src/styles/download.scss */
 .file-container .file-info .file-extension {
   color: #808080;
   font-size: 20px;
 }
 
-/* line 63, ../../src/styles/download.scss */
+/* line 60, ../../src/styles/download.scss */
 .file-container .file-info .file-size {
   font-size: 14px;
   color: #808080;
 }
 
-/* line 68, ../../src/styles/download.scss */
+/* line 65, ../../src/styles/download.scss */
 .file-container .file-download {
   width: 120px;
   margin: 0 auto;
   color: black;
 }
 
-/* line 74, ../../src/styles/download.scss */
+/* line 71, ../../src/styles/download.scss */
 .file-container .file-download a {
   width: 120px;
   margin-top: 20px;
+}
+
+/* line 76, ../../src/styles/download.scss */
+.btn.download {
+  color: #fff;
+  background-color: rgba(58, 64, 74, 0.5);
+  font-size: .9em !important;
+  border-color: #3a404a;
+  font-weight: 300;
+  padding: 10px 30px !important;
+}
+
+/* line 84, ../../src/styles/download.scss */
+.btn.download:hover {
+  background: #3a404a;
+  color: #45caa7;
+}
+
+@media (max-width: 767px) {
+  /* line 94, ../../src/styles/download.scss */
+  .pigion-ad, .file-container {
+    margin-top: 0px;
+  }
 }

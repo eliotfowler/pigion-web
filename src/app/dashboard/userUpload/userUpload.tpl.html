@@ -8,12 +8,12 @@
 
     </div>
 
-    <div class="middle-section">
-        <div class="file-title">
+    <div class="middle-section col-sm-8">
+        <div class="row col-sm-12 file-title">
             <span class="file-name">{{file.name}}</span><span class="file-extension">.{{file.extension}}</span>
         </div>
 
-        <div class="file-info">
+        <div class="row col-sm-12 file-info">
             <div class="downloads file-info-bit">
                 <i class="fa fa-download fa-lg"></i>
                 <ng-pluralize class="download-text"
@@ -28,13 +28,13 @@
 
             <password-tool has-password="!!file.password"></password-tool>
 
-            <div class="time file-info-bit">
+            <div class=" time file-info-bit">
                 <i class="fa fa-clock-o"></i>
                 <span am-time-ago="date"></span>
             </div>
         </div>
 
-        <div class="file-size">
+        <div class="row col-sm-12 file-size">
             <span ng-show="!newFile || (newFile && !!doneUploading)">{{file.size | bytes}}</span>
             <span ng-show="(newFile && !doneUploading)">{{percentUploaded}}% uploaded</span>
         </div>

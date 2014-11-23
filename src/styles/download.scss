@@ -1,25 +1,24 @@
 .pigion-ad {
-  position: absolute;
-  height: 400px;
-  width: 50%;
-  left: 0;
-  margin-top: 200px;
-  background: rgba(66, 74, 91, 1);
+background: rgba(66, 74, 91, 0.98);
+box-shadow: Inset 0px 0px 0px 1px #3a404a;
+margin-top: 10%;
+min-height: 400px;
 }
 
   .pigion-ad img {
-    width: 66px;
+    width: 100px;
     margin: 50px auto 30px auto;
     display: block;
   }
 
-  .pigion-ad .tagline {
-    width: 160px;
-    margin: 0 auto;
-    display: block;
-    color: rgb(102, 171, 160);
-    text-align: center;
-    font-weight: bold;
+	.pigion-ad .tagline {
+	width: 40%;
+	margin: 0 auto;
+	display: block;
+	color: #23b7a9;
+	text-align: center;
+	font-weight: 400;
+	font-size: 1.2em;
   }
 
   .pigion-ad .learn-more {
@@ -28,13 +27,11 @@
   }
 
 .file-container {
-  position: absolute;
-  height: 400px;
-  width: 50%;
-  left: 50%;
-  margin-top: 200px;
-  background: rgba(66, 74, 91, .75);
-  color: white;
+background: rgba(66, 74, 91, 0.81);
+color: white;
+box-shadow: Inset -1px 0px 0px 1px #3a404a;
+margin-top: 10%;
+min-height: 400px;
 }
 
   .file-container .file-type-container {
@@ -75,3 +72,32 @@
       width: 120px;
       margin-top: 20px;
     }
+
+.btn.download {
+color: #fff;
+background-color: rgba(58, 64, 74, 0.5);
+font-size: .9em !important;
+border-color: #3a404a;
+font-weight: 300;
+padding: 10px 30px !important;
+}
+	.btn.download:hover {
+	background: #3a404a;
+	color: #45caa7;
+	}
+	
+	
+	
+	
+@media (max-width:767px){
+	
+	.pigion-ad, .file-container { 
+		margin-top: 0px;
+		}
+
+
+
+
+
+
+}
