@@ -16,8 +16,8 @@ angular.module('pigionWebApp', [
 
   .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, RestangularProvider ) {
     $urlRouterProvider.otherwise( '/' );
-    $locationProvider.html5Mode(true);
-    RestangularProvider.setBaseUrl('https://pigion.herokuapp.com');
+    $locationProvider.html5Mode(false);
+    RestangularProvider.setBaseUrl('http://localhost:9000');
   })
 
   .run( function run () {

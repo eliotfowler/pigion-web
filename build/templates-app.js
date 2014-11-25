@@ -184,7 +184,7 @@ angular.module("download/download.tpl.html", []).run(["$templateCache", function
     "    </div>\n" +
     "\n" +
     "    <div class=\"file-download\">\n" +
-    "        <a type=\"button\" ng-href={{fileInfo.fullUrl}} class=\"btn btn-lg btn-success download\">Download</a>\n" +
+    "        <a type=\"button\" ng-href={{downloadUrl}} class=\"btn btn-lg btn-success download\">Download</a>\n" +
     "    </div>\n" +
     "</div>");
 }]);

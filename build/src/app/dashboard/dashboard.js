@@ -22,7 +22,7 @@ angular.module(
   })
 
   .controller( 'DashboardCtrl', function LoginCtrl( $scope, hotkeys, $upload, Restangular, UserService ) {
-    Restangular.configuration.baseUrl = 'https://pigion.herokuapp.com';
+    Restangular.configuration.baseUrl = 'http://localhost:9000';
     Restangular.configuration.defaultHeaders['X-Auth-Token'] = UserService.getUserToken();
     $scope.files = [];
     Restangular.all('files').getList().then(function(files) {
@@ -90,7 +90,7 @@ angular.module(
 
         $scope.files.unshift(newFile);
         $scope.upload = $upload.upload({
-          url: 'https://pigion.herokuapp.com' + '/files/upload',
+          url: 'http://localhost:9000' + '/files/upload',
           //method: 'POST' or 'PUT',
           headers: {'X-Auth-Token': UserService.getUserToken()},
           file: file
