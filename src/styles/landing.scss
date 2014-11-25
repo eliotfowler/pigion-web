@@ -364,10 +364,11 @@ li.brand_windows {
   padding-top: 20px;
 }
 
-#section4 .text{
-  background: #3A404A;
-  border: 1px solid #FA984F;
-  color: #FA984F;
+#section4 .text {
+background: #3A404A;
+border: 1px solid #FA984F;
+color: #FA984F;
+margin-bottom: 10px;
 }
 
 
@@ -381,7 +382,7 @@ li.brand_windows {
 }
 
 .subscribe .sub-heading {
-  margin-bottom: 20px;
+margin: 10px 30px 20px;
 }
 
 .subscribe input.text {
@@ -397,7 +398,7 @@ li.brand_windows {
   border-radius: 3px;
   font: 12px "Roboto";
   color: #3498d9;
-  margin-bottom: 20px;
+//   margin-bottom: 20px;
 }
 
 
@@ -427,12 +428,22 @@ li.brand_windows {
 }
 
 #subscribe {
-  cursor: pointer;
-  text-rendering: geometricprecision;
-  text-decoration: none;
-  color: white !important;
-  background:#FA984F !important;
+cursor: pointer;
+text-rendering: geometricprecision;
+text-decoration: none;
+color: white !important;
+background: #FA984F;
+padding: 9px 10px 10px 10px;
+text-align: center;
+border-radius: 3px;
+margin-bottom: 5px;
+top: 3px;
+position: relative;
+transition: .3s ease;
 }
+	#subscribe:hover {
+	background: #DA762B;
+	}
 
 .social-list { padding-top: 20px; }
 .social-list li {
@@ -497,8 +508,9 @@ p.us {
   margin-top: -16px;
 }
 
-.footer-author img{
-  float: left;
+.footer-author img {
+float: left;
+margin-right: 10px;
 }
 .footer-copyright p {
 	margin: 3px 0px 1px;
@@ -609,11 +621,13 @@ p.us {
     margin-left: -249px;
   }
 
+/*
   .footer-author {
     text-align: left;
     width: 100%;
 
   }
+*/
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
@@ -678,4 +692,27 @@ p.us {
     }
 
   }
+}
+
+
+
+
+
+@media (max-width:600px){
+	.footer-author {
+	text-align: center;
+	width: 100%;
+	}
+
+	.footer-copyright {
+	margin-top: 6px;
+	width: 100%;
+	text-align: center;
+	}
+	
+	.footer-author img {
+	float: none;
+	margin-right: 0px;
+	}
+
 }

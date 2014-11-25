@@ -365,12 +365,12 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
     "\n" +
     "<footer>\n" +
     "    <div class=\"container\">\n" +
-    "        <div class=\"footer-author col-md-6\">\n" +
-    "            <img src=\"assets/images/logo_circ.png\">\n" +
+    "        <div class=\"footer-author col-xs-6\">\n" +
+    "            <img src=\"assets/images/logo_circ.png\" class=\"f_logo\">\n" +
     "            <p>made by</p>\n" +
     "            <p class=\"us\">Eliot Fowler + Andrew Acree</p>\n" +
     "        </div>\n" +
-    "        <div class=\"footer-copyright col-md-6\">\n" +
+    "        <div class=\"footer-copyright col-xs-6\">\n" +
     "            <p class=\"copyright\">© 2014 Just Cause. All Rights Reserved. </p>\n" +
     "            <ul class=\"footer-action\">\n" +
     "                <li><a class=\"small\" href=\"#\">Privacy Policy</i></a></li>\n" +
