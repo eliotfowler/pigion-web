@@ -43,8 +43,4 @@ angular.module(
     $scope.fileName = fileInfo.fileName.substr(actualFileNameStart, actualFileNameSize);
     $scope.fileExtension = fileInfo.fileName.substr(fileInfo.fileName.lastIndexOf('.')+1);
 
-    console.log('fileInfo', fileInfo);
-
-    $scope.downloadUrl = "http://localhost:9000/download/" + fileInfo.shortUrlHash + "/" +
-      fileInfo.fileName.substr(actualFileNameStart);
   });

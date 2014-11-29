@@ -4,16 +4,9 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
   $templateCache.put("dashboard/dashboard.tpl.html",
     "<link href=\"assets/dashboard.css\" rel=\"stylesheet\"/>\n" +
     "\n" +
-    "<!--\n" +
     "<div class=\"drop-zone ng-scope\" ng-file-drop=\"onFileSelect($files)\" ng-file-drag-over-class=\"drop-hover\">\n" +
     "    <span>drop files here</span>\n" +
-    "\n" +
-    "    <a href=\"javascript:;\" class=\"animatedBorderBox\">\n" +
-    "        <div class=\"background\"></div>\n" +
-    "        <div class=\"content\">HOVER</div>\n" +
-    "    </a>\n" +
     "</div>\n" +
-    "-->\n" +
     "\n" +
     "<nav class=\"navbar navbar-default\" role=\"navigation\">\n" +
     "    <div class=\"container container-fluid\">\n" +

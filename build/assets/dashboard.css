@@ -121,6 +121,7 @@ ul.horizontal li {
 
 /* line 106, ../../src/styles/dashboard.scss */
 .drop-zone {
+  opacity: .5;
   z-index: 0;
   position: fixed;
   top: 0;
@@ -129,7 +130,7 @@ ul.horizontal li {
   height: 100%;
 }
 
-/* line 115, ../../src/styles/dashboard.scss */
+/* line 116, ../../src/styles/dashboard.scss */
 .drop-zone span {
   background: white;
   height: 200px;
@@ -143,13 +144,15 @@ ul.horizontal li {
   transition: .3s ease-out;
 }
 
-/* line 127, ../../src/styles/dashboard.scss */
+/* line 128, ../../src/styles/dashboard.scss */
 .drop-zone span:hover {
   background: #45CAA7;
 }
 
-/* line 131, ../../src/styles/dashboard.scss */
+/* line 132, ../../src/styles/dashboard.scss */
 .drop-zone.drop-hover {
+  opacity: 0.9;
+  z-index: 1000;
   display: block;
   background-color: rgba(50, 57, 71, 0.75);
   color: white;
@@ -161,17 +164,17 @@ ul.horizontal li {
   /* -webkit-filter: blur(5px); */
 }
 
-/* line 144, ../../src/styles/dashboard.scss */
+/* line 147, ../../src/styles/dashboard.scss */
 .drop-zone.drop-hover span {
   display: table;
 }
 
-/* line 148, ../../src/styles/dashboard.scss */
+/* line 151, ../../src/styles/dashboard.scss */
 .file-in-files {
   height: 100px;
 }
 
-/* line 152, ../../src/styles/dashboard.scss */
+/* line 155, ../../src/styles/dashboard.scss */
 .container {
   z-index: 500;
 }
@@ -180,7 +183,7 @@ ul.horizontal li {
 @boxSize: 200px;
 @color: #0e6d82;
 */
-/* line 163, ../../src/styles/dashboard.scss */
+/* line 166, ../../src/styles/dashboard.scss */
 .animatedBorderBox {
   display: block;
   position: relative;
@@ -191,20 +194,20 @@ ul.horizontal li {
   color: #0e6d82;
   font-size: 20px;
 }
-/* line 173, ../../src/styles/dashboard.scss */
+/* line 176, ../../src/styles/dashboard.scss */
 .animatedBorderBox:hover {
   color: spin(#0e6d82, 15);
 }
-/* line 176, ../../src/styles/dashboard.scss */
+/* line 179, ../../src/styles/dashboard.scss */
 .animatedBorderBox:hover .background {
   background-position: 100px 0;
 }
-/* line 179, ../../src/styles/dashboard.scss */
+/* line 182, ../../src/styles/dashboard.scss */
 .animatedBorderBox:hover .content {
   background-color: #b2eaf7;
 }
 
-/* line 185, ../../src/styles/dashboard.scss */
+/* line 188, ../../src/styles/dashboard.scss */
 .background, .content {
   position: absolute;
   bottom: 0;
@@ -213,7 +216,7 @@ ul.horizontal li {
   right: 0;
 }
 
-/* line 193, ../../src/styles/dashboard.scss */
+/* line 196, ../../src/styles/dashboard.scss */
 .background {
   transition: 1200ms;
   background-color: #0e6d82;
@@ -221,7 +224,7 @@ ul.horizontal li {
   background-size: 30px;
 }
 
-/* line 200, ../../src/styles/dashboard.scss */
+/* line 203, ../../src/styles/dashboard.scss */
 .content {
   transition: 200ms;
   margin: 1px;
