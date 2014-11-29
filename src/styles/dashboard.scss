@@ -104,6 +104,7 @@ ul.horizontal li {
 }
 
 .drop-zone {
+  opacity:0.0;
   z-index: 0;
   position: fixed;
   top:0;
@@ -129,6 +130,8 @@ ul.horizontal li {
 }
 
 .drop-zone.drop-hover {
+  opacity:0.9;
+  z-index: 1000;
   display: block;
   background-color: rgba(50, 57, 71, 0.75);
   color: white;
