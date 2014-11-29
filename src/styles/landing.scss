@@ -166,9 +166,79 @@ background: rgba(52, 52, 61, 0.31);
 
 
 
+// Responsive Nav
+
+rnav {
+	height: 40px;
+	width: 100%;
+	background: #455868;
+	font-size: 11pt;
+	position: relative;
+	display: none;
+}
+rnav ul {
+padding: 0;
+margin: 0 auto;
+width: 100%;
+height: 40px;
+background: rgba(52, 52, 61, 0.44);
+color: #45caa7;
+text-decoration: none;
+font-weight: 200;
+}
+rnav li {
+	display: inline;
+	float: left;
+	width: 25%;
+}
+
+rnav a {
+	width: 100%;
+	color: #aeaeae;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: none;
+}
+rnav li a {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+rnav li:last-child a {
+}
+rnav a:hover, rnav a:active {
+background: rgba(52, 52, 61, 0.5);
+color: #45caa7;
+text-shadow: none;
+}
+rnav a#pull {
+	display: none;
+}		
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+
 
 /* Mobile Nav */
+ 
 
+/*
 #mobile-nav {
   display: none;
   width: 100%;
@@ -200,8 +270,15 @@ background: rgba(52, 52, 61, 0.31);
 #mobile-nav .navigationContent a:hover {
   color: #a1a1a1;
 }
+*/
 
 /* Hero */
+
+#logo img {
+width: 70%;
+image-rendering: optimizeQuality;
+max-width: 150px;
+}
 
 .hero {
   margin-top: 35px;
@@ -313,6 +390,11 @@ li.brand_windows {
   padding: 0px 30px;
 }
 
+#section2 .content-box p {
+font-size: .9em;
+}
+
+
 /* Section 3 */
 
 #section3 {
@@ -361,7 +443,7 @@ li.brand_windows {
   background:#4A5362;
   color: white;
   box-shadow: inset 0px 10px rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
+  padding: 20px;
 }
 
 #section4 .text {
@@ -389,7 +471,8 @@ margin: 10px 30px 20px;
   display: inline-block;
   outline: none;
   -webkit-appearance: none;
-  width: 340px;
+  width: 100%;
+  max-width: 300px;
   padding: 15px 0px 15px 15px;
   background: white;
   border: 1px solid #d4d4d4;
@@ -542,11 +625,11 @@ margin-right: 10px;
 /* Smaller than 960px */
 @media only screen and (max-width: 959px) {
   h1 { margin-top: 0px; font-size: 3em; }
-  h2 { font-size: 2.5em; }
-  #mobile-nav { display: block; }
-  header { position: static; margin-top: 47px; }
+  h2 { font-size: 2.25em; }
+  rnav { display: block; }
+  header { position: static; }
   #navigation {  display: none; }
-  #logo {  width: 100%; text-align: center; }
+    #logo { width: 100%; text-align: center; margin: 30px 0px -10px;}
   .bx-prev, .bx-next { display: none!important; }
 
   #style-switch { display: none; }
@@ -621,13 +704,20 @@ margin-right: 10px;
     margin-left: -249px;
   }
 
-/*
-  .footer-author {
-    text-align: left;
-    width: 100%;
 
-  }
-*/
+
+	#section1 h2 {
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-size: 1.4em;
+	padding: 10px 70px 0px;
+	}
+	#section2 .content-box {
+	padding: 0px 10px 20px;
+	}
+	.content-box h3 {
+	margin: 0px 0px 8px;
+	}
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
@@ -690,7 +780,6 @@ margin-right: 10px;
     .subscribe input.text {
       width: 300px;
     }
-
   }
 }
 
@@ -699,6 +788,78 @@ margin-right: 10px;
 
 
 @media (max-width:600px){
+    
+    //Responsive Nav
+    rnav {   
+        height: auto;  
+    }  
+    rnav ul {  
+        width: 100%;  
+        display: block;  
+        height: auto;  
+    }  
+    rnav li {  
+        width: 50%;  
+        float: left;  
+        position: relative;  
+    }  
+    rnav li a {  
+        border: none;
+    }  
+    rnav a {  
+        text-align: left;  
+        width: 100%;  
+        text-indent: 25px;  
+    }  
+    
+    //
+    
+	#section1 h2 {
+	text-align: center;
+	margin: 10px 0px 0px 0px;
+	font-size: 1.4em;
+	padding: 10px 30px 0px;
+	}
+	#section2 .sub-heading, 
+	#section3 .sub-heading{
+	font-size: 1em;
+	}
+	
+	#section2 .content-box {
+	padding: 0px 10px 20px;
+	}
+	.content-box h3 {
+	margin: 0px 0px 8px;
+	}
+
+	
+    //
+    
+	.brand_select {
+	width: 200px;
+	left: 50%;
+	margin-left: -100px;
+	height: 50px;
+	margin-top: -50px;
+	padding: 18px 10px;
+	}
+    
+	.brand_select li {
+	margin-left: 14px;
+	margin-right: 25px;
+	margin-top: -4px;
+	}
+	
+	.brand_select img {
+	width: 25px;
+	}    
+    
+    li.brand_windows {
+	margin-top: -1px !important;
+	margin-right: 0px !important;
+	}
+    //
+
 	.footer-author {
 	text-align: center;
 	width: 100%;
@@ -716,3 +877,18 @@ margin-right: 10px;
 	}
 
 }
+
+
+@media only screen and (max-width : 320px) {  
+    rnav li {  
+        display: block;  
+        float: left;  
+        width: 50%;  
+    }  
+    rnav li a {  
+        border: none;  
+    }  
+    
+    
+    
+}  

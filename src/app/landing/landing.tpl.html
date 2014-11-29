@@ -1,5 +1,6 @@
 <link href="assets/landing.css" rel="stylesheet"/>
 
+<!--
 <div id="mobile-nav">
     <div class="container clearfix">
         <div>
@@ -19,11 +20,23 @@
         </div>
     </div>
 </div>
+-->
+
+<rnav class="clearfix">  
+    <ul class="clearfix">  
+        <li><a href="#">Home</a></li>  
+        <li><a href="#">Features</a></li>  
+        <li><a href="#">Blog</a></li>  
+        <li><a href="#">Sign In</a></li>  
+    </ul>  
+    <a href="#" id="pull">Menu</a>  
+</rnav>  
+
 
 <header class="clearfix">
     <div class="container">
 
-        <div id="logo" class="col-sm-3"><img src="assets/images/logo_circ.png" alt=""><h3 id="logo-name">Pigion</h3></div>
+        <div id="logo" class="col-sm-3"><img src="assets/images/logo.png" alt=""><!-- <h3 id="logo-name">Pigion</h3>< --></div>
 
         <nav id="navigation" class="col-sm-9">
             <ul class="clearfix">
@@ -186,3 +199,17 @@
         </div>
     </div>
 </footer>
+
+<script type="text/javascript">
+$(function() {
+	var pull 		= $('#pull');
+		menu 		= $('rnav ul');
+		menuHeight	= menu.height();
+
+	$(pull).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+});
+
+</script>

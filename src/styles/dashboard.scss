@@ -393,3 +393,93 @@ ul.horizontal li {
 .password-enter button {
   float: right;
 }
+
+
+
+@media (max-width:600px){
+	
+	.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.progress-background {
+	display: block;
+	height: 100px;
+	width: 100%;
+	}
+	
+	.file-in-files {
+	height: 140px;
+	}
+	
+	.middle-section.col-sm-8 {
+	width: 80%;
+	}
+	
+	.file-title {
+	font-size: 1.4em;
+	}
+	
+	.outer-container {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100px;
+	-webkit-box-shadow: inset 0 0 0 1px #3e424b;
+	box-shadow: inset 0 0 0 1px #3e424b;
+	padding: 10px 0px 0px 0px;
+	color: #8798aa;
+	bottom: 100px;
+	left: 0;
+	}
+	
+	.file-preview {
+	margin-left: 10px;
+	}
+	
+	.middle-section.col-sm-8 {
+	height: 90px;
+	display: block;	
+	}
+	
+	.right-ops {
+	clear: both;
+	}
+	
+	.delete {
+	float: left;
+	height: 40px;
+	width: 50%;
+	text-align: center;
+	}	
+	.delete i {
+	margin-top: 14px;
+	}
+	
+	.copy {
+	float: right;
+	width: 50%;
+	height: 40px;
+	text-align: center;
+	background: #3B4252;
+	}
+	
+	.copy p {
+	margin-top: 10px;
+	margin-left: 0px;
+	}
+	
+	.row.col-sm-12.file-info {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	margin-top: 7px;
+	margin-bottom: 1px;
+	}
+	
+
+		
+	}

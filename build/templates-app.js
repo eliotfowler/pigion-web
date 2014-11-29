@@ -46,6 +46,9 @@ angular.module("dashboard/dashboard.tpl.html", []).run(["$templateCache", functi
     "\n" +
     "<div class=\"container\">\n" +
     "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
     "    <div id=\"files-information\">\n" +
     "        <div class=\"center-wrapper\">\n" +
     "            <div class=\"center-subheader\">\n" +
@@ -196,6 +199,7 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
   $templateCache.put("landing/landing.tpl.html",
     "<link href=\"assets/landing.css\" rel=\"stylesheet\"/>\n" +
     "\n" +
+    "<!--\n" +
     "<div id=\"mobile-nav\">\n" +
     "    <div class=\"container clearfix\">\n" +
     "        <div>\n" +
@@ -215,11 +219,23 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
+    "-->\n" +
+    "\n" +
+    "<rnav class=\"clearfix\">  \n" +
+    "    <ul class=\"clearfix\">  \n" +
+    "        <li><a href=\"#\">Home</a></li>  \n" +
+    "        <li><a href=\"#\">Features</a></li>  \n" +
+    "        <li><a href=\"#\">Blog</a></li>  \n" +
+    "        <li><a href=\"#\">Sign In</a></li>  \n" +
+    "    </ul>  \n" +
+    "    <a href=\"#\" id=\"pull\">Menu</a>  \n" +
+    "</rnav>  \n" +
+    "\n" +
     "\n" +
     "<header class=\"clearfix\">\n" +
     "    <div class=\"container\">\n" +
     "\n" +
-    "        <div id=\"logo\" class=\"col-sm-3\"><img src=\"assets/images/logo_circ.png\" alt=\"\"><h3 id=\"logo-name\">Pigion</h3></div>\n" +
+    "        <div id=\"logo\" class=\"col-sm-3\"><img src=\"assets/images/logo.png\" alt=\"\"><!-- <h3 id=\"logo-name\">Pigion</h3>< --></div>\n" +
     "\n" +
     "        <nav id=\"navigation\" class=\"col-sm-9\">\n" +
     "            <ul class=\"clearfix\">\n" +
@@ -381,7 +397,21 @@ angular.module("landing/landing.tpl.html", []).run(["$templateCache", function($
     "            </ul>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</footer>");
+    "</footer>\n" +
+    "\n" +
+    "<script type=\"text/javascript\">\n" +
+    "$(function() {\n" +
+    "	var pull 		= $('#pull');\n" +
+    "		menu 		= $('rnav ul');\n" +
+    "		menuHeight	= menu.height();\n" +
+    "\n" +
+    "	$(pull).on('click', function(e) {\n" +
+    "		e.preventDefault();\n" +
+    "		menu.slideToggle();\n" +
+    "	});\n" +
+    "});\n" +
+    "\n" +
+    "</script>");
 }]);
 
 angular.module("login/login.tpl.html", []).run(["$templateCache", function($templateCache) {
