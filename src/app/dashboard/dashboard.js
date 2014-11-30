@@ -4,7 +4,8 @@ angular.module(
     'services.userService',
     'pigionWebApp.dashboard.userUpload',
     'pigionWebApp.dashboard.passwordTool',
-    'bytes'
+    'bytes',
+    'focusMe'
   ])
 
 

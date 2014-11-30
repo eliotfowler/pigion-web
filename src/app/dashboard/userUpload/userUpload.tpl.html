@@ -1,53 +1,63 @@
-<div class="progress-background">
-    <progressbar max="max" value="dynamic"></progressbar>
-</div>
+<div class="flip">
+    <div class="card" ng-class="{'flipped' : flipped}">
 
-<div class="outer-container">
-
-    <div class="file-preview">
-
-    </div>
-
-    <div class="middle-section col-sm-8">
-        <div class="row col-sm-12 file-title">
-            <span class="file-name">{{file.name}}</span><span class="file-extension">.{{file.extension}}</span>
-        </div>
-
-        <div class="row col-sm-12 file-info">
-            <div class="downloads file-info-bit">
-                <i class="fa fa-download fa-lg"></i>
-                <ng-pluralize class="download-text"
-                              ng-show="file.maxDownloads < 0"
-                              count="file.numDownloads"
-                              when="{'0':'0 times',
-                                     '1':'1 time',
-                                     'other':'{} times'}">
-                </ng-pluralize>
-                <span ng-hide="file.maxDownloads < 0" class="download-text">{{file.numDownloads}} of {{file.maxDownloads}}</span>
+        <div class="front face">
+            <div class="progress-background">
+                <progressbar max="max" value="dynamic"></progressbar>
             </div>
 
-            <password-tool has-password="!!file.password"></password-tool>
+            <div class="outer-container">
+                <div class="file-preview"></div>
 
-            <div class=" time file-info-bit">
-                <i class="fa fa-clock-o"></i>
-                <span am-time-ago="date"></span>
+                <div class="middle-section col-sm-8">
+                    <div class="row col-sm-12 file-title">
+                        <span class="file-name">{{file.name}}</span><span class="file-extension">.{{file.extension}}</span>
+                    </div>
+
+                    <div class="row col-sm-12 file-info">
+                        <div class="downloads file-info-bit">
+                            <i class="fa fa-download fa-lg"></i>
+                            <ng-pluralize class="download-text"
+                                          ng-show="file.maxDownloads < 0"
+                                          count="file.numDownloads"
+                                          when="{'0':'0 times',
+                                         '1':'1 time',
+                                         'other':'{} times'}">
+                            </ng-pluralize>
+                            <span ng-hide="file.maxDownloads < 0" class="download-text">{{file.numDownloads}} of {{file.maxDownloads}}</span>
+                        </div>
+
+                        <password-tool ng-click="passwordClicked()" has-password="!!file.password"></password-tool>
+
+                        <div class=" time file-info-bit">
+                            <i class="fa fa-clock-o"></i>
+                            <span am-time-ago="date"></span>
+                        </div>
+                    </div>
+
+                    <div class="row col-sm-12 file-size">
+                        <span ng-show="!newFile || (newFile && !!doneUploading)">{{file.size | bytes}}</span>
+                        <span ng-show="(newFile && !doneUploading)">{{percentUploaded}}% uploaded</span>
+                    </div>
+                </div>
+
+
+                <div class="right-ops">
+                    <div class="delete">
+                        <i class="fa fa-trash fa-lg"></i>
+                    </div>
+
+                    <div class="copy">
+                        <p>copy</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="row col-sm-12 file-size">
-            <span ng-show="!newFile || (newFile && !!doneUploading)">{{file.size | bytes}}</span>
-            <span ng-show="(newFile && !doneUploading)">{{percentUploaded}}% uploaded</span>
-        </div>
-    </div>
-
-
-    <div class="right-ops">
-        <div class="delete">
-            <i class="fa fa-trash fa-lg"></i>
-        </div>
-
-        <div class="copy">
-            <p>copy</p>
+        <div class="password-enter back face">
+            <form name="passwordForm">
+                <input type="password" name="password" placeholder="#supersafepassword" focus-me="flipped"/>
+            </form>
+            <button ng-click="passwordClicked()">Back</button>
         </div>
     </div>
 </div>
