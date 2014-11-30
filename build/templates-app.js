@@ -94,56 +94,66 @@ angular.module("dashboard/passwordTool/passwordTool.tpl.html", []).run(["$templa
 
 angular.module("dashboard/userUpload/userUpload.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("dashboard/userUpload/userUpload.tpl.html",
-    "<div class=\"progress-background\">\n" +
-    "    <progressbar max=\"max\" value=\"dynamic\"></progressbar>\n" +
-    "</div>\n" +
+    "<div class=\"flip\">\n" +
+    "    <div class=\"card\" ng-class=\"{'flipped' : flipped}\">\n" +
     "\n" +
-    "<div class=\"outer-container\">\n" +
-    "\n" +
-    "    <div class=\"file-preview\">\n" +
-    "\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div class=\"middle-section col-sm-8\">\n" +
-    "        <div class=\"row col-sm-12 file-title\">\n" +
-    "            <span class=\"file-name\">{{file.name}}</span><span class=\"file-extension\">.{{file.extension}}</span>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"row col-sm-12 file-info\">\n" +
-    "            <div class=\"downloads file-info-bit\">\n" +
-    "                <i class=\"fa fa-download fa-lg\"></i>\n" +
-    "                <ng-pluralize class=\"download-text\"\n" +
-    "                              ng-show=\"file.maxDownloads < 0\"\n" +
-    "                              count=\"file.numDownloads\"\n" +
-    "                              when=\"{'0':'0 times',\n" +
-    "                                     '1':'1 time',\n" +
-    "                                     'other':'{} times'}\">\n" +
-    "                </ng-pluralize>\n" +
-    "                <span ng-hide=\"file.maxDownloads < 0\" class=\"download-text\">{{file.numDownloads}} of {{file.maxDownloads}}</span>\n" +
+    "        <div class=\"front face\">\n" +
+    "            <div class=\"progress-background\">\n" +
+    "                <progressbar max=\"max\" value=\"dynamic\"></progressbar>\n" +
     "            </div>\n" +
     "\n" +
-    "            <password-tool has-password=\"!!file.password\"></password-tool>\n" +
+    "            <div class=\"outer-container\">\n" +
+    "                <div class=\"file-preview\"></div>\n" +
     "\n" +
-    "            <div class=\" time file-info-bit\">\n" +
-    "                <i class=\"fa fa-clock-o\"></i>\n" +
-    "                <span am-time-ago=\"date\"></span>\n" +
+    "                <div class=\"middle-section col-sm-8\">\n" +
+    "                    <div class=\"row col-sm-12 file-title\">\n" +
+    "                        <span class=\"file-name\">{{file.name}}</span><span class=\"file-extension\">.{{file.extension}}</span>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"row col-sm-12 file-info\">\n" +
+    "                        <div class=\"downloads file-info-bit\">\n" +
+    "                            <i class=\"fa fa-download fa-lg\"></i>\n" +
+    "                            <ng-pluralize class=\"download-text\"\n" +
+    "                                          ng-show=\"file.maxDownloads < 0\"\n" +
+    "                                          count=\"file.numDownloads\"\n" +
+    "                                          when=\"{'0':'0 times',\n" +
+    "                                         '1':'1 time',\n" +
+    "                                         'other':'{} times'}\">\n" +
+    "                            </ng-pluralize>\n" +
+    "                            <span ng-hide=\"file.maxDownloads < 0\" class=\"download-text\">{{file.numDownloads}} of {{file.maxDownloads}}</span>\n" +
+    "                        </div>\n" +
+    "\n" +
+    "                        <password-tool ng-click=\"passwordClicked()\" has-password=\"!!file.password\"></password-tool>\n" +
+    "\n" +
+    "                        <div class=\" time file-info-bit\">\n" +
+    "                            <i class=\"fa fa-clock-o\"></i>\n" +
+    "                            <span am-time-ago=\"date\"></span>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"row col-sm-12 file-size\">\n" +
+    "                        <span ng-show=\"!newFile || (newFile && !!doneUploading)\">{{file.size | bytes}}</span>\n" +
+    "                        <span ng-show=\"(newFile && !doneUploading)\">{{percentUploaded}}% uploaded</span>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "\n" +
+    "\n" +
+    "                <div class=\"right-ops\">\n" +
+    "                    <div class=\"delete\">\n" +
+    "                        <i class=\"fa fa-trash fa-lg\"></i>\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"copy\">\n" +
+    "                        <p>copy</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "\n" +
-    "        <div class=\"row col-sm-12 file-size\">\n" +
-    "            <span ng-show=\"!newFile || (newFile && !!doneUploading)\">{{file.size | bytes}}</span>\n" +
-    "            <span ng-show=\"(newFile && !doneUploading)\">{{percentUploaded}}% uploaded</span>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "\n" +
-    "    <div class=\"right-ops\">\n" +
-    "        <div class=\"delete\">\n" +
-    "            <i class=\"fa fa-trash fa-lg\"></i>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"copy\">\n" +
-    "            <p>copy</p>\n" +
+    "        <div class=\"password-enter back face\">\n" +
+    "            <form name=\"passwordForm\">\n" +
+    "                <input type=\"password\" name=\"password\" placeholder=\"#supersafepassword\" focus-me=\"flipped\"/>\n" +
+    "            </form>\n" +
+    "            <button ng-click=\"passwordClicked()\">Back</button>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>");
