@@ -239,7 +239,6 @@ ul.horizontal li {
 
 .file-title {
   display: inline-block;
-  margin-left: 10px;
   float:left;
   font-size: 25px;
   max-height: 30px;
@@ -385,7 +384,7 @@ ul.horizontal li {
   color: #8ba8ce; /* color after you fill it in */
   padding: 15px 15px 15px 100px;
   font-size: 3.05em;
-  transition: .3s;
+  transition: .3s ease;
   margin-top: 1px;
   margin-left: 1px;
 }
