@@ -483,3 +483,23 @@ ul.horizontal li {
 
 		
 	}
+
+
+
+@media (max-width:320px){
+
+	.file-title {
+	font-size: 1.1em;
+	}
+	.file-preview {
+	display: none;
+	}
+	
+	.middle-section.col-sm-8 {
+	width: 100%;
+	padding-right: 0px;
+	}	
+	
+
+
+}

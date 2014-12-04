@@ -328,3 +328,20 @@ ul.horizontal li {
     margin-bottom: 1px;
   }
 }
+@media (max-width: 320px) {
+  /* line 303, ../../src/styles/dashboard.scss */
+  .file-title {
+    font-size: 1.1em;
+  }
+
+  /* line 306, ../../src/styles/dashboard.scss */
+  .file-preview {
+    display: none;
+  }
+
+  /* line 310, ../../src/styles/dashboard.scss */
+  .middle-section.col-sm-8 {
+    width: 100%;
+    padding-right: 0px;
+  }
+}
