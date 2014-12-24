@@ -38,4 +38,26 @@ angular.module('services.userService', [])
     this.login = function(username, password) {
 
     };
+
+    this.getUserFilesInfo = function getUserFilesInfo() {
+      var deferred = $q.defer();
+      Restangular.all('users').one('filesInfo').get().then(function(data) {
+        deferred.resolve(data);
+      }, function(){
+        deferred.reject();
+      });
+
+      return deferred.promise;
+    };
+
+    this.getUserInfo = function getUserInfo() {
+      var deferred = $q.defer();
+      Restangular.all('users').one('info').get().then(function(data) {
+        deferred.resolve(data);
+      }, function(){
+        deferred.reject();
+      });
+
+      return deferred.promise;
+    };
   });

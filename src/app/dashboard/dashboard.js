@@ -12,20 +12,33 @@ angular.module(
   .config(function config( $stateProvider ) {
     $stateProvider.state( 'dashboard', {
       url: '/dashboard',
+      authenticate: true,
       views: {
         "main": {
           controller: 'DashboardCtrl',
           templateUrl: 'dashboard/dashboard.tpl.html'
         }
       },
-      data:{ pageTitle: 'Dashboard' }
+      data:{ pageTitle: 'Dashboard' },
+      resolve: {
+        userFilesInfo: function(UserService){
+          return UserService.getUserFilesInfo();
+        },
+
+        userInfo: function(UserService){
+          return UserService.getUserInfo();
+        }
+      }
     });
   })
 
-  .controller( 'DashboardCtrl', function LoginCtrl( $scope, hotkeys, $upload, Restangular, UserService ) {
-    Restangular.configuration.baseUrl = 'https://pigion.herokuapp.com';
+  .controller( 'DashboardCtrl', function LoginCtrl( $scope, hotkeys, $upload, Restangular, UserService, userInfo, userFilesInfo ) {
     Restangular.configuration.defaultHeaders['X-Auth-Token'] = UserService.getUserToken();
     $scope.files = [];
+
+    $scope.user = userInfo;
+    $scope.userFileInfo = userFilesInfo;
+
     Restangular.all('files').getList().then(function(files) {
 
       for(var i = 0; i< files.length; i++) {
@@ -91,7 +104,7 @@ angular.module(
 
         $scope.files.unshift(newFile);
         $scope.upload = $upload.upload({
-          url: 'https://pigion.herokuapp.com' + '/files/upload',
+          url: 'http://localhost:9000' + '/files/upload',
           //method: 'POST' or 'PUT',
           headers: {'X-Auth-Token': UserService.getUserToken()},
           file: file
