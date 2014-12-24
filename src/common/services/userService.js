@@ -2,12 +2,12 @@ angular.module('services.userService', [])
   .service('UserService', function($cookieStore, Restangular, $q) {
     var userToken;
 
-    this.saveUserToken = function(token) {
+    this.saveUserToken = function saveUserToken(token) {
       userToken = token;
       $cookieStore.put('userToken', token);
     };
 
-    this.getUserToken = function () {
+    this.getUserToken = function getUserToken() {
       if(userToken) {
         return userToken;
       } else {
@@ -21,12 +21,11 @@ angular.module('services.userService', [])
       return '';
     };
 
-    this.isAuthenticated = function() {
+    this.isAuthenticated = function isAuthenticated() {
       var deferred = $q.defer();
       // Make a sample call and see if it returns true
-      Restangular.configuration.baseUrl = 'https://pigion.herokuapp.com';
       Restangular.configuration.defaultHeaders["X-Auth-Token"] = this.getUserToken();
-      Restangular.all('files').getList().then(function(files) {
+      Restangular.all('files').getList().then(function() {
         deferred.resolve();
       }, function(){
         deferred.reject();
