@@ -54,10 +54,12 @@
             </div>
         </div>
         <div class="password-enter back face">
-            <form name="passwordForm">
-                <input type="password" name="password" placeholder="#supersafepassword" focus-me="flipped"/>
+            <form name="passwordForm" ng-submit="setPassword()">
+                <input type="password" ng-model="password" name="password" placeholder="#supersafepassword" focus-me="flipped"/>
+                <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
             </form>
             <button ng-click="passwordClicked()">Back</button>
+
         </div>
     </div>
 </div>

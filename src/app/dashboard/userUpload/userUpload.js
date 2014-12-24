@@ -7,7 +7,7 @@ angular.module('pigionWebApp.dashboard.userUpload', [])
         scope: {
             'file': '=file'
         },
-        controller: function($scope) {
+        controller: function($scope, Restangular) {
           $scope.flipped = false;
           $scope.date = new Date($scope.file.expirationDate);
           $scope.newFile = $scope.file.newFile;
@@ -30,6 +30,11 @@ angular.module('pigionWebApp.dashboard.userUpload', [])
 
           $scope.passwordClicked = function passwordClicked() {
             $scope.flipped = !$scope.flipped;
+          };
+
+          $scope.setPassword = function setPassword() {
+            console.log('adding password');
+            Restangular.all('files').customPUT( null, 'addPassword/' + $scope.file.id, {'password': $scope.password}, {});
           };
         },
         link: function postLink(scope, element, attrs) {
