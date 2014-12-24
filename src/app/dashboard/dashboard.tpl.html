@@ -9,8 +9,6 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-
-
             <ul class="nav navbar-nav">
                 <a class="navbar-brand pull-left" href="#"><img src="assets/images/logo.png" class="logo"></a>
 
@@ -23,7 +21,7 @@
                 -->
 
                 <li class="dropdown pull-right white">
-                    <a href class="dropdown-toggle" data-toggle="dropdown">Andrew <span class="caret"></span></a>
+                    <a href class="dropdown-toggle" data-toggle="dropdown">{{user.firstName}} <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Another action</a></li>
@@ -42,9 +40,6 @@
 
 <div class="container">
 
-
-
-
     <div id="files-information">
         <div class="center-wrapper">
             <div class="center-subheader">
@@ -56,14 +51,14 @@
         <ul class="horizontal">
             <li>
                 <ng-pluralize class="file-tidbit"
-                              count="files.length"
+                              count="userFileInfo.numTotalUploads"
                               when="{'0':'No files',
                                      '1':'1 file',
                                      'other':'{} files'}">
                 </ng-pluralize>
             </li>
-            <li><span class="file-tidbit">{{totalFileSize}}kb</span></li>
-            <li><span class="file-tidbit">{{userAllTimeFiles}} delivered</span></li>
+            <li><span class="file-tidbit">{{userFileInfo.totalSizeUploaded | bytes}}</span></li>
+            <li><span class="file-tidbit">{{userFileInfo.numDownloads}} delivered</span></li>
         </ul>
     </div>
 
@@ -72,5 +67,4 @@
             <user-upload file=i></user-upload>
         </div>
     </div>
-
 </div>
