@@ -1,4 +1,6 @@
-angular.module('pigionWebApp.dashboard.userUpload', [])
+angular.module('pigionWebApp.dashboard.userUpload', [
+  'ngClipboard'
+])
 
     .directive('userUpload', function () {
     return {
@@ -7,7 +9,7 @@ angular.module('pigionWebApp.dashboard.userUpload', [])
         scope: {
             'file': '=file'
         },
-        controller: function($scope, Restangular) {
+        controller: function($scope, Restangular, $location) {
           $scope.flipped = false;
           $scope.date = new Date($scope.file.expirationDate);
           $scope.newFile = $scope.file.newFile;
@@ -36,6 +38,15 @@ angular.module('pigionWebApp.dashboard.userUpload', [])
             console.log('adding password');
             Restangular.all('files').customPUT( null, 'addPassword/' + $scope.file.id, {'password': $scope.password}, {});
           };
+
+          $scope.fallback = function(copy) {
+            window.prompt('Press cmd+c to copy the text below.', copy);
+          };
+
+          console.log($location.absUrl());
+          console.log($scope.file);
+
+          $scope.downloadPageUrl = 'test';
         },
         link: function postLink(scope, element, attrs) {
             if (attrs.newFile) {

@@ -75,7 +75,9 @@ module.exports = {
       'vendor/ng-file-upload/angular-file-upload.js',
       'vendor/lodash/dist/lodash.compat.js',
       'vendor/restangular/dist/restangular.js',
-      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js'
+      'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
+      'vendor/zeroclipboard/dist/ZeroClipboard.min.js',
+      'vendor/ng-clip/dest/ng-clip.min.js'
     ],
     css: [
       'vendor/angular-hotkeys/build/hotkeys.min.css',

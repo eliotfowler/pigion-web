@@ -12,7 +12,10 @@
     "restangular": "~1.4.0",
     "ng-file-upload": "~1.6.12",
     "ng-file-upload-shim": "~1.6.12",
-    "angular-moment": "~0.8.2"
+    "angular-moment": "~0.8.2",
+    "zeroclipboard": "~2.1.6",
+    "ng-clip": "~0.2.5"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }
