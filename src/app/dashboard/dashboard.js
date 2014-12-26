@@ -104,7 +104,7 @@ angular.module(
 
         $scope.files.unshift(newFile);
         $scope.upload = $upload.upload({
-          url: 'http://localhost:9000' + '/files/upload',
+          url: Restangular.configuration.baseUrl + '/files/upload',
           //method: 'POST' or 'PUT',
           headers: {'X-Auth-Token': UserService.getUserToken()},
           file: file
