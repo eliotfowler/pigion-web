@@ -43,10 +43,8 @@ angular.module('pigionWebApp.dashboard.userUpload', [
             window.prompt('Press cmd+c to copy the text below.', copy);
           };
 
-          console.log($location.absUrl());
-          console.log($scope.file);
-
-          $scope.downloadPageUrl = 'test';
+          var baseUrl = $location.absUrl().substr(0, $location.absUrl().lastIndexOf('/'));
+          $scope.downloadPageUrl = baseUrl + '/' + $scope.file.shortUrlHash;
         },
         link: function postLink(scope, element, attrs) {
             if (attrs.newFile) {
