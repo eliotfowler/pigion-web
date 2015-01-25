@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="assets/signup.css" />
+
+<div class="container">
+    <form name="form" class="signup-form" novalidate>
+        <div class="personal-info">
+            <span>Personal Information</span>
+            <input class="dark-text-input" type="text" ng-model="user.firstName" name="first-name" placeholder="First Name" required="" />
+            <input class="dark-text-input" type="text" ng-model="user.lastName" name="first-name" placeholder="Last Name" required="" />
+            <input class="dark-text-input" type="email" ng-model="user.email" name="email" placeholder="Email" required="" />
+            <input class="dark-text-input" type="password" ng-model="user.password" name="password" placeholder="Password" required="" />
+        </div>
+
+        <div class="where-to-host">
+            <span>Where to Host</span>
+
+            <div class="with-us">
+                <img class="host-logo pigion" src="" alt="pigion">
+                <span class="host-name">With Us</span>
+            </div>
+
+            <div class="dropbox">
+                <img class="host-logo dropbox" src="" alt="dropbox">
+                <span class="host-name">Dropbox</span>
+            </div>
+
+            <div class="drive">
+                <img class="host-logo drive" src="" alt="drive">
+                <span class="host-name">Google Drive</span>
+            </div>
+
+            <div class="s3">
+                <img class="host-logo s3" src="" alt="s3">
+                <span class="host-name">Amazon S3</span>
+            </div>
+
+        </div>
+
+        <input type="submit" ng-click="signup(user)" value="Sign Up" />
+    </form>
+</div>
+

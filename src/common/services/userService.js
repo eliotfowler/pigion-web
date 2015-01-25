@@ -59,4 +59,20 @@ angular.module('services.userService', [])
 
       return deferred.promise;
     };
+
+    this.signup = function signup(user) {
+      var deferred = $q.defer();
+      // Make the actual object
+      var userToSend = {
+        "userName": user.email,
+        "firstName": user.firstName,
+        "lastName": user.lastName,
+        "password": user.password
+      };
+      Restangular.all('auth').all('signupRemote').post(userToSend).then(function(data) {
+        deferred.resolve(data);
+      }, function() {
+        deferred.reject();
+      });
+    };
   });

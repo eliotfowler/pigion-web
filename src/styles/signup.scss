@@ -1,0 +1,13 @@
+.dark-text-input {
+  display: block;
+  border-radius: 3px;
+  background-color: rgb( 58, 64, 74 );
+  border: none;
+  height: 50px;
+  margin-bottom: 10px;
+  width: 250px;
+  color: #8ba8ce; /* color after you fill it in */
+  padding: 15px;
+  font-size: 1.05em;
+  transition: .3s;
+}
