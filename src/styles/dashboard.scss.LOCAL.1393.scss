@@ -412,44 +412,9 @@ ul.horizontal li {
 }
 
 .password-enter button {
-  float: right; 
+  float: right;
 }
 
-
-form.ng-pristine.ng-valid {
-float: left;
-}
-
-.password_buttons {
-width: 173px;
-float: right;
-height: 100%;
-}
-
-<<<<<<< HEAD
-=======
-.password-enter button {
-float: left;
-background: #333E4D;
-height: 100%;
-border: none;
-padding: 0px 25px;
-color: white;
-background: #404756;
-color: #5f6977;
-transition: .3s ease-out;
-}
-
-.password-enter button:hover {
-color: white;
-background: #333e4d;
-}
-
-
-
-
-
->>>>>>> Sign up and Password Section
 @media (max-width:600px){
 	
 	.container {

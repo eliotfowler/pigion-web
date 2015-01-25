@@ -1,3 +1,9 @@
+.container.sign_up_screen {
+max-width: 700px;
+margin: 0 auto;
+}
+
+
 .dark-text-input {
   display: block;
   border-radius: 3px;
@@ -5,9 +11,83 @@
   border: none;
   height: 50px;
   margin-bottom: 10px;
-  width: 250px;
   color: #8ba8ce; /* color after you fill it in */
   padding: 15px;
   font-size: 1.05em;
   transition: .3s;
+}
+
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 0px;
+  border-bottom: none;
+}
+
+.logo{
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+
+.sign_up_screen span {
+color: white;
+display: block;
+margin: 20px 0px 5px;
+}
+
+
+.personal-info input{ 
+	display: block;
+border-radius: 3px;
+background-color: #3a404a;
+border: none;
+height: 50px;
+margin-bottom: 10px;
+/* width: 250px; */
+color: #8ba8ce;
+padding: 15px;
+font-size: 1.05em;
+transition: .3s;
+}
+
+.where-to-host {
+display: table;
+width: 100%;
+}
+
+
+
+
+
+.with-us, .dropbox, .drive, .s3 {
+border-radius: 3px;
+background: #3A404A;
+padding: 7px 20px 10px;
+}
+.with-us.selected, .dropbox.selected, .drive.selected, .s3.selected {
+border: 1px solid #4fd0a6;
+margin-bottom: 10px;
+color: white;
+}
+
+.host-logo {
+float: left;
+margin-right: 10px;
+margin-top: 7px;
+}
+
+.host-name {
+float: left;
+font-weight: 400;
+font-size: 1.2em;
+margin-top: 12px;
+}
+
+input.btn2 {
+margin: 30px 0px;
+padding: 12px 50px 30px;
+color: white;
+font-size: 1.3em;
+height: 50px;
 }

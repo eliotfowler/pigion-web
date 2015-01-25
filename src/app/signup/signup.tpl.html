@@ -1,41 +1,48 @@
 <link rel="stylesheet" type="text/css" href="assets/signup.css" />
 
-<div class="container">
+<div class="container sign_up_screen">
+	
+    <div class="page-header">
+        <img src="assets/images/logo.png" cl ass="logo">
+    </div>
+	
     <form name="form" class="signup-form" novalidate>
         <div class="personal-info">
-            <span>Personal Information</span>
-            <input class="dark-text-input" type="text" ng-model="user.firstName" name="first-name" placeholder="First Name" required="" />
-            <input class="dark-text-input" type="text" ng-model="user.lastName" name="first-name" placeholder="Last Name" required="" />
-            <input class="dark-text-input" type="email" ng-model="user.email" name="email" placeholder="Email" required="" />
-            <input class="dark-text-input" type="password" ng-model="user.password" name="password" placeholder="Password" required="" />
+            <span>Personal Info </span>
+            <input class="dark-text-input col-md-6" type="text" ng-model="user.firstName" name="first-name" placeholder="First Name" required="" />
+            <input class="dark-text-input col-md-6" type="text" ng-model="user.lastName" name="first-name" placeholder="Last Name" required="" />
+            <input class="dark-text-input col-sm-12" type="email" ng-model="user.email" name="email" placeholder="Email" required="" />
+            <input class="dark-text-input col-sm-12" type="password" ng-model="user.password" name="password" placeholder="Password" required="" />
         </div>
 
         <div class="where-to-host">
             <span>Where to Host</span>
 
-            <div class="with-us">
-                <img class="host-logo pigion" src="" alt="pigion">
-                <span class="host-name">With Us</span>
+            <div class="with-us selected col-sm-12"> 
+                <img class="host-logo pigion" src="assets/images/pigion_host.png" alt="pigion">
+                <div class="host-name">With Us</div>
             </div>
 
-            <div class="dropbox">
-                <img class="host-logo dropbox" src="" alt="dropbox">
-                <span class="host-name">Dropbox</span>
+            <div class="dropbox col-sm-12 col-md-4">
+                <img class="host-logo" src="assets/images/drop_host_off.png" alt="dropbox">
+                <div  class="host-name">Dropbox</div>
             </div>
 
-            <div class="drive">
-                <img class="host-logo drive" src="" alt="drive">
-                <span class="host-name">Google Drive</span>
+            <div class="drive col-sm-12 col-md-4">
+                <img class="host-logo" src="assets/images/drive_host_off.png" alt="drive">
+                <div class="host-name">Google Drive</div>
             </div>
 
-            <div class="s3">
-                <img class="host-logo s3" src="" alt="s3">
-                <span class="host-name">Amazon S3</span>
+            <div class="s3 col-sm-12 col-md-4">
+                <img class="host-logo" src="assets/images/amazon_host_off.png" alt="s3">
+                <div class="host-name">Amazon S3</div>
             </div>
 
         </div>
-
-        <input type="submit" ng-click="signup(user)" value="Sign Up" />
+        
+        <button type="submit" ng-click="signup(user)" value="Sign Up" class="btn btn-primary special_b">Sign Up</button>
+        
+<!--         <input type="submit" ng-click="signup(user)" value="Sign Up" class="btn2" /> -->
     </form>
 </div>
 

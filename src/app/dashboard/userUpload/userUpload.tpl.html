@@ -61,8 +61,10 @@
                 <input type="password" ng-model="password" name="password" placeholder="#supersafepassword" focus-me="flipped"/>
                 <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
             </form>
-            <button ng-click="passwordClicked()">Back</button>
-
+            <div class="password_buttons">
+	            <button ng-click="passwordClicked()" class="pass_Save">Save</button>
+	            <button ng-click="passwordClicked()" class="pass_cancel">Cancel</button>
+            </div>
         </div>
     </div>
 </div>
