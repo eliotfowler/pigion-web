@@ -19,6 +19,8 @@ angular.module(
   .controller( 'SignupCtrl', function SignupCtrl( $scope, UserService ) {
     $scope.user = {};
 
+    $scope.selectedHost = 'pigion';
+
     $scope.signup = function signup(user) {
       UserService.signup(user);
     };

@@ -17,9 +17,6 @@ margin: 0 auto;
   transition: .3s;
 }
 
-
-
-
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 0px;
@@ -31,36 +28,34 @@ margin: 0 auto;
     margin-bottom: 10px;
 }
 
-
 .signin_1 {
 width: calc(50% - 20px);
 margin-right: 20px;
 }
 
 .sign_up_screen span {
-color: white;
-display: block;
-margin: 20px 0px 5px;
+  color: white;
+  display: block;
+  margin: 20px 0px 5px;
 }
-
 
 .personal-info input{ 
 	display: block;
-border-radius: 3px;
-background-color: #3a404a;
-border: none;
-height: 50px;
-margin-bottom: 10px;
-/* width: 250px; */
-color: #8ba8ce;
-padding: 15px;
-font-size: 1.05em;
-transition: .3s;
+  border-radius: 3px;
+  background-color: #3a404a;
+  border: none;
+  height: 50px;
+  margin-bottom: 10px;
+  /* width: 250px; */
+  color: #8ba8ce;
+  padding: 15px;
+  font-size: 1.05em;
+  transition: .3s;
 }
 
 .where-to-host {
-display: table;
-width: 100%;
+  display: table;
+  width: 100%;
 }
 
 

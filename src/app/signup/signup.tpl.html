@@ -20,23 +20,35 @@
         <div class="where-to-host">
             <span>Where to Host</span>
 
-            <div class="host_opt selected col-sm-12"> 
-                <img class="host-logo pigion" src="assets/images/pigion_host.png" alt="pigion">
+            <div class="host_opt selected col-sm-12"
+                 ng-class="{'selected' : selectedHost == 'pigion'}"
+                 ng-click="selectedHost = 'pigion';" >
+                <img ng-hide="selectedHost == 'pigion'" class="host-logo pigion" src="assets/images/pigion_host_off.png" alt="pigion">
+                <img ng-show="selectedHost == 'pigion'" class="host-logo pigion" src="assets/images/pigion_host_on.png" alt="pigion">
                 <div class="host-name">With Us</div>
             </div>
 
-            <div class="host_opt small_3">
-                <img class="host-logo" src="assets/images/drop_host_off.png" alt="dropbox">
-                <div  class="host-name">Dropbox</div>
+            <div class="host_opt small_3"
+                 ng-class="{'selected' : selectedHost == 'dropbox'}"
+                 ng-click="selectedHost = 'dropbox';" >
+                <img ng-hide="selectedHost == 'dropbox'" class="host-logo" src="assets/images/drop_host_off.png" alt="dropbox">
+                <img ng-show="selectedHost == 'dropbox'" class="host-logo" src="assets/images/drop_host_on.png" alt="dropbox">
+                <div class="host-name">Dropbox</div>
             </div>
 
-            <div class="host_opt small_3">
-                <img class="host-logo" src="assets/images/drive_host_off.png" alt="drive">
+            <div class="host_opt small_3"
+                 ng-class="{'selected' : selectedHost == 'drive'}"
+                 ng-click="selectedHost = 'drive';" >
+                <img ng-hide="selectedHost == 'drive'" class="host-logo" src="assets/images/drive_host_off.png" alt="drive">
+                <img ng-show="selectedHost == 'drive'" class="host-logo" src="assets/images/drive_host_on.png" alt="drive">
                 <div class="host-name">Google Drive</div>
             </div>
 
-            <div class="host_opt small_3">
-                <img class="host-logo" src="assets/images/amazon_host_off.png" alt="s3">
+            <div class="host_opt small_3"
+                 ng-class="{'selected' : selectedHost == 's3'}"
+                 ng-click="selectedHost = 's3';" >
+                <img ng-hide="selectedHost == 's3'" class="host-logo" src="assets/images/amazon_host_off.png" alt="s3">
+                <img ng-show="selectedHost == 's3'" class="host-logo" src="assets/images/amazon_host_on.png" alt="s3">
                 <div class="host-name">Amazon S3</div>
             </div>
 
