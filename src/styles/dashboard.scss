@@ -65,6 +65,7 @@ margin-top: 4px;
 margin-top: 10px;
 height: 30px;
 margin-bottom: 10px;
+width: 100%;
 }
 
 
@@ -421,17 +422,13 @@ text-align: center;
 /* background: gainsboro; */
  padding: 41px 0px;
  transition: .3s ease;
+ color: white;
 }
 	.copy:hover,
 	.copy a:hover .copy,
 	.copy a:hover{
 		background: #333e4d;
 	}
-
-	.copy a {
-	  color: white;
-	}
-
 
 .progress-background {
   display: block;
@@ -603,37 +600,41 @@ width: 50%;
 	clear: both;
 	}
 	
+	.file-size {
+	width: 100%;
+	}
+	
+	.copy {
+	float: left;
+	height: 40px;
+	width: 50%;
+	padding: 10px;
+	background: rgb(61, 66, 79);
+	text-align: center;
+	}
+		
 	.delete {
 	float: left;
 	height: 40px;
 	width: 50%;
 	text-align: center;
+	margin-right: 0px;
 	}	
 	.delete i {
 	margin-top: 14px;
 	}
 	
-/*
 	.copy {
-float: right;
-width: 100px;
-height: 98px;
-margin-top: -9px;
-text-align: center;
-background: gainsboro;
-padding: 41px 0px;
-}
-	
-	
-	.copy:hover {
-	background: #333e4d;
+	float: left;
+	height: 40px;
+	width: 50%;
+	text-align: center;
+	}	
+	.copy a {
+	margin-top: 14px;
 	}
 	
-	.copy p {
-	margin-top: 10px;
-	margin-left: 0px;
-	}
-*/
+	
 	
 	.row.col-sm-12.file-info {
 	clear: both;
