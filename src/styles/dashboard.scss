@@ -59,6 +59,63 @@ background-color: #455263;
 /* Top Info Section */
 
 #files-information {
+margin-top: 4px;
+}
+.top_dash {
+margin-top: 10px;
+height: 30px;
+margin-bottom: 10px;
+}
+
+
+ul.horizontal li {
+float: left;
+color: #a8b0be;
+}
+
+// Custom File Input Button
+
+input.custom-file-input {
+width: 80px;
+float: left;
+height: 30px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+content: 'Upload';
+display: inline-block;
+/* background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3); */
+border-radius: 3px;
+padding: 5px 15px;
+outline: none;
+white-space: nowrap;
+-webkit-user-select: none;
+cursor: pointer;
+font-size: 9pt;
+background: #3f4956;
+color: #a8b0be;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+
+.center-subheader span {
+float: left;
+margin-top: 3px;
+color: #a8b0be;
+}
+
+
+/*
+
+#files-information {
   position: relative;
   height: 40px;
   margin-left: 2px;
@@ -102,6 +159,7 @@ ul.horizontal li {
 .files-section > div{
   margin-top: 10px;
 }
+*/
 
 .drop-zone {
   opacity:0.0;
@@ -275,6 +333,10 @@ ul.horizontal li {
   max-height: 30px;
   line-height: 1em;
 }
+	.file-preview span {
+	line-height: 17px;
+	font-weight: 300 !important;
+	}
 
 .file-title .file-name {
   color: white;
