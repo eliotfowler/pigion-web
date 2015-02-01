@@ -13,7 +13,8 @@ angular.module('pigionWebApp', [
   'pigionWebApp.dashboard',
   'pigionWebApp.download',
   'ui.router',
-  'interceptors.authHttpResponseInterceptor'
+  'interceptors.authHttpResponseInterceptor',
+  'services.fileService'
 ])
 
   .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, RestangularProvider, $httpProvider ) {
