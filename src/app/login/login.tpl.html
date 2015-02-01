@@ -22,8 +22,8 @@
             </div>
         </div>
         
-        <div class="login_error">
-	        <span>Your username or password is incorrect.</span>
+        <div ng-show="errorText !== undefined && errorText.length > 0" class="login_error">
+	        <span>{{errorText}}</span>
         </div>
 
         <div class="form-actions">

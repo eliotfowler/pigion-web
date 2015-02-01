@@ -26,7 +26,11 @@ angular.module(
                 UserService.saveUserToken(response.token);
                 $location.path("/dashboard");
             }, function(response) {
-                console.log("There was an error saving", response);
+              if(response.data.error.toLowerCase() === 'invalid credentials') {
+                $scope.errorText = 'Your username or password is incorrect';
+              } else {
+                $scope.errorText = response.data.error;
+              }
             });
         };
 });
