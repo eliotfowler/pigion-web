@@ -27,7 +27,10 @@ angular.module('pigionWebApp.dashboard.userUpload', [
                       $scope.doneUploading = true;
                   }
               });
+          }
 
+          if ($scope.file.contentType.indexOf('image') === 0) {
+            $scope.imageType = true;
           }
 
           $scope.passwordClicked = function passwordClicked() {
