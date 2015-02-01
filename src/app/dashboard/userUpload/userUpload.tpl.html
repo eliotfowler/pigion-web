@@ -6,11 +6,11 @@
                 <progressbar max="max" value="dynamic"></progressbar>
             </div>
 
-            <div class="outer-container">
+            <div class="outer-container"  ng-class="{'active': $parent.$index === $parent.selectedIndex}">
                 <div class="file-preview">
                     <img class="placeholder-file" ng-hide="imageType" src="assets/images/file.png">
                     <span ng-hide="imageType" class="file-type">{{file.extension}}</span>
-                    <img ng-show="imageType" class="image-preview" ng-src="{{file.fullUrl}}" />
+                    <div class="image-preview" ng-show="imageType" ng-style="{'background-image':'url({{file.fullUrl}})'}"></div>
                 </div>
 
                 <div class="middle-section col-sm-8">
@@ -25,8 +25,8 @@
                                           ng-show="file.maxDownloads < 0"
                                           count="file.numDownloads"
                                           when="{'0':'0 times',
-                                         '1':'1 time',
-                                         'other':'{} times'}">
+                                                 '1':'1 time',
+                                                 'other':'{} times'}">
                             </ng-pluralize>
                             <span ng-hide="file.maxDownloads < 0" class="download-text">{{file.numDownloads}} of {{file.maxDownloads}}</span>
                         </div>

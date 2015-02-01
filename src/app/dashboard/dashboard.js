@@ -39,6 +39,8 @@ angular.module(
     $scope.user = userInfo;
     $scope.userFileInfo = userFilesInfo;
 
+    $scope.selectedIndex = -1;
+
     Restangular.all('files').getList().then(function(files) {
 
       for(var i = 0; i< files.length; i++) {
@@ -66,6 +68,20 @@ angular.module(
     $scope.files.sort(getSortFunction('expirationDate'));
 
     $scope.toggleCheatSheet = hotkeys.toggleCheatSheet;
+    hotkeys.bindTo($scope)
+      .add({
+        combo: 'down',
+        description: 'Move to the next uploaded file',
+        callback: function() {
+          $scope.selectedIndex = Math.min($scope.selectedIndex + 1, $scope.files.length-1);
+        }
+      }).add({
+        combo: 'up',
+        description: 'Move to the previous uploaded file',
+        callback: function() {
+          $scope.selectedIndex = Math.max($scope.selectedIndex - 1, 0);
+        }
+      });
 
     $scope.totalFileSize = 200;
     $scope.userAllTimeFiles = 32;
