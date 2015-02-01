@@ -18,11 +18,11 @@ angular.module('pigionWebApp.dashboard.userUpload', [
           $scope.dynamic = $scope.counter;
           $scope.doneUploading = !$scope.newFile;
           $scope.max = 100;
-          console.log('max is ' + $scope.max);
 
           if(!!$scope.newFile) {
               $scope.$on('fileUploadPercent-' + $scope.file.guid, function(event, data) {
                   $scope.dynamic = data;
+                  $scope.percentUploaded = data;
                   if($scope.dynamic == 100) {
                       $scope.doneUploading = true;
                   }
