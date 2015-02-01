@@ -8,8 +8,9 @@
 
             <div class="outer-container">
                 <div class="file-preview">
-                    <img src="assets/images/file.png">
-                    <span class="file-type">{{file.extension}}</span>
+                    <img class="placeholder-file" ng-hide="imageType" src="assets/images/file.png">
+                    <span ng-hide="imageType" class="file-type">{{file.extension}}</span>
+                    <img ng-show="imageType" class="image-preview" ng-src="{{file.fullUrl}}" />
                 </div>
 
                 <div class="middle-section col-sm-8">
