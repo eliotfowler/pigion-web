@@ -9,7 +9,7 @@ angular.module('pigionWebApp.dashboard.userUpload', [
         scope: {
             'file': '=file'
         },
-        controller: function($scope, Restangular, $location) {
+        controller: function($scope, Restangular, $location, $timeout, FileService) {
           $scope.flipped = false;
           $scope.date = new Date($scope.file.expirationDate);
           $scope.newFile = $scope.file.newFile;
@@ -34,7 +34,21 @@ angular.module('pigionWebApp.dashboard.userUpload', [
           }
 
           $scope.passwordClicked = function passwordClicked() {
-            $scope.flipped = !$scope.flipped;
+            $scope.flipped = true;
+            $timeout(function(){
+              $scope.doneFlipping = true;
+            }, 500);
+          };
+
+          $scope.passwordCancelled = function passwordCancelled() {
+            $scope.doneFlipping = false;
+            $scope.flipped = false;
+          };
+
+          $scope.passwordSaved = function passwordSaved() {
+            FileService.addPasswordToFile($scope.file, $scope.password);
+            $scope.doneFlipping = false;
+            $scope.flipped = false;
           };
 
           $scope.setPassword = function setPassword() {

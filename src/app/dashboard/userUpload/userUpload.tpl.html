@@ -1,7 +1,7 @@
 <div class="flip">
     <div class="card" ng-class="{'flipped' : flipped}">
 
-        <div class="front face">
+        <div class="front face" ng-class="{'wrong-face': doneFlipping && flipped}">
             <div class="progress-background">
                 <progressbar max="max" value="dynamic"></progressbar>
             </div>
@@ -57,14 +57,14 @@
                 </div>
             </div>
         </div>
-        <div class="password-enter back face">
+        <div class="password-enter back face" ng-class="{'wrong-face': doneFlipping && !flipped}">
             <form name="passwordForm" ng-submit="setPassword()">
                 <input type="password" ng-model="password" name="password" placeholder="#supersafepassword" focus-me="flipped"/>
                 <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
             </form>
             <div class="password_buttons">
-	            <button ng-click="passwordClicked()" class="pass_Save">Save</button>
-	            <button ng-click="passwordClicked()" class="pass_cancel">Cancel</button>
+	            <button ng-click="passwordCancelled()" class="pass_Save">Save</button>
+	            <button ng-click="passwordSaved()" class="pass_cancel">Cancel</button>
             </div>
         </div>
     </div>
