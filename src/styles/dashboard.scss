@@ -71,6 +71,7 @@ margin-bottom: 10px;
 ul.horizontal li {
 float: left;
 color: #a8b0be;
+margin-right: 12px;
 }
 
 // Custom File Input Button
@@ -208,6 +209,7 @@ ul.horizontal li {
 
 .file-in-files {
   height: 100px;
+  margin-bottom: 10px;
 }
 
 .container {
@@ -321,7 +323,8 @@ ul.horizontal li {
 }
 
 .outer-container.active {
-  box-shadow: 0px 2px red;
+  box-shadow: 0px 3px #874be2;
+  transition: .3s ease;
 }
 
 .file-title {
@@ -410,17 +413,25 @@ ul.horizontal li {
 
 
 .copy {
-  float: right;
-  width: 100px;
-  height: 98px;
-  margin-top: -9px;
+float: right;
+width: 100px;
+height: 98px;
+margin-top: -9px;
+text-align: center;
+/* background: gainsboro; */
+ padding: 41px 0px;
+ transition: .3s ease;
 }
+	.copy:hover,
+	.copy a:hover .copy,
+	.copy a:hover{
+		background: #333e4d;
+	}
 
-.copy p {
-  color: white;
-  margin-top: 41px;
-  margin-left: 30px;
-}
+	.copy a {
+	  color: white;
+	}
+
 
 .progress-background {
   display: block;
@@ -483,13 +494,18 @@ ul.horizontal li {
   background-color: rgba(67, 76, 92, .9);
   border: none;
   height: 98px;
-  width: 90%;
+  width: 100%;
   color: #8ba8ce; /* color after you fill it in */
   padding: 15px 15px 15px 100px;
   font-size: 3.05em;
   transition: .3s ease;
   margin-top: 1px;
   margin-left: 1px;
+}
+
+form.ng-valid.ng-dirty {
+width: 80% !important;
+float: left;
 }
 
 .password-enter button {
@@ -499,24 +515,26 @@ ul.horizontal li {
 
 form.ng-pristine.ng-valid {
 float: left;
+width: 80%;
 }
 
 .password_buttons {
-width: 173px;
+width: 20%;
 float: right;
 height: 100%;
 }
 
 .password-enter button {
-  float: left;
-  background: #333E4D;
-  height: 100%;
-  border: none;
-  padding: 0px 25px;
-  color: white;
-  background: #404756;
-  color: #5f6977;
-  transition: .3s ease-out;
+float: left;
+background: #333E4D;
+height: 100%;
+border: none;
+padding: 0px 15px;
+color: white;
+background: #404756;
+color: #5f6977;
+transition: .3s ease-out;
+width: 50%;
 }
 
 .password-enter button:hover {
@@ -592,18 +610,27 @@ height: 100%;
 	margin-top: 14px;
 	}
 	
+/*
 	.copy {
-	float: right;
-	width: 50%;
-	height: 40px;
-	text-align: center;
-	background: #3B4252;
+float: right;
+width: 100px;
+height: 98px;
+margin-top: -9px;
+text-align: center;
+background: gainsboro;
+padding: 41px 0px;
+}
+	
+	
+	.copy:hover {
+	background: #333e4d;
 	}
 	
 	.copy p {
 	margin-top: 10px;
 	margin-left: 0px;
 	}
+*/
 	
 	.row.col-sm-12.file-info {
 	clear: both;
