@@ -5,6 +5,10 @@ angular.module('bytes', [])
               return '-';
             }
 
+            if (bytes === 0) {
+              return '0 bytes';
+            }
+
             if (typeof precision === 'undefined') {
               precision = 1;
             }
