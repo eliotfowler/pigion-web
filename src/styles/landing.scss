@@ -434,6 +434,7 @@ font-size: .9em;
   position: relative;
   z-index: 1;
   background-repeat: no-repeat;
+  height: 210px;
 }
 
 
@@ -652,6 +653,7 @@ margin-right: 10px;
   .gallery-bxslider li .screenshot:first-of-type img { float: left; margin-left: 20px; }
   .gallery-bxslider li .screenshot:last-of-type img { float: left; margin-left: 30px; }
   .bx-wrapper { background-size: 100%; background-position: bottom center; }
+  
 }
 
 /* All Mobile Sizes (devices and browser) */
@@ -662,6 +664,7 @@ margin-right: 10px;
   }
   .screenshot { margin-bottom: 120px; }
   .screenshot:last-child { margin-bottom: 0px; }
+    .links_sent_bg {  display: none;}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

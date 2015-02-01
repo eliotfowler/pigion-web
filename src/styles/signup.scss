@@ -18,6 +18,8 @@ margin: 0 auto;
 }
 
 
+
+
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 0px;
@@ -29,6 +31,11 @@ margin: 0 auto;
     margin-bottom: 10px;
 }
 
+
+.signin_1 {
+width: calc(50% - 20px);
+margin-right: 20px;
+}
 
 .sign_up_screen span {
 color: white;
@@ -59,29 +66,37 @@ width: 100%;
 
 
 
-
-.with-us, .dropbox, .drive, .s3 {
+.host_opt {
 border-radius: 3px;
 background: #3A404A;
 padding: 7px 20px 10px;
-}
-.with-us.selected, .dropbox.selected, .drive.selected, .s3.selected {
-border: 1px solid #4fd0a6;
 margin-bottom: 10px;
-color: white;
+height: 50px;
 }
+	.host_opt.selected {
+	border: 1px solid #4fd0a6;
+	color: white;
+	box-sizing: border-box;
+	padding: 6px 19px 10px;
+	}
+	
+	.host_opt.selected .host-name {
+		color: white;
+		}
+
 
 .host-logo {
 float: left;
 margin-right: 10px;
-margin-top: 7px;
+margin-top: 5px;
 }
 
 .host-name {
 float: left;
 font-weight: 400;
 font-size: 1.2em;
-margin-top: 12px;
+margin-top: 9px;
+color: rgb(120, 143, 173);
 }
 
 input.btn2 {
@@ -91,3 +106,40 @@ color: white;
 font-size: 1.3em;
 height: 50px;
 }
+
+.small_3 {
+width: calc(33% - 5px);
+float: left;
+margin-right: 10px;
+}
+
+.where-to-host .host_opt:nth-child(5){
+margin-right: 0px;
+}
+
+@media (max-width: 992px) {
+	.signin_1 {
+	width: 100%;
+	}
+
+  }
+  
+  
+  
+  @media (max-width: 630px) {
+	.small_3 {
+	width: 100%;
+	float: left;
+	margin-right: 0px;
+	}
+	
+	.container.sign_up_screen{
+	margin: 10px;
+	}
+
+  }
+  
+  
+  
+  
+  

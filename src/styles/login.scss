@@ -185,13 +185,34 @@ a.btn2:hover {
     margin: 15px 0px;
     text-align: center;
     clear: both;
-    opacity: .5;
+//     opacity: .5;
     transition: .5s ease;
 }
 .sign_up:hover {
     opacity: 1;
     transition: .3s ease;
 }
+
+.sign_up a {
+color: rgb(76, 199, 173);
+}
+.sign_up a:hover {
+color: rgb(76, 199, 173);
+}
+
+
+.login_error {
+color: rgb(245, 140, 144);
+font-size: .9em;
+background: rgb(74, 58, 65);
+padding: 10px;
+width: 250px;
+margin-bottom: 10px;
+border-radius: 3px;
+border: 1px solid rgba(224, 89, 89, 0.5);
+}
+
+
 
 .b_foot {
     background-image: -moz-linear-gradient( 0deg, #4fd0a6 0%, #17b0aa 100%);
