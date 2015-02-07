@@ -34,6 +34,7 @@ angular.module('pigionWebApp.dashboard.userUpload', [
           }
 
           $scope.passwordClicked = function passwordClicked() {
+            console.log('pass');
             $scope.flipped = true;
             $timeout(function(){
               $scope.doneFlipping = true;
@@ -43,12 +44,23 @@ angular.module('pigionWebApp.dashboard.userUpload', [
           $scope.passwordCancelled = function passwordCancelled() {
             $scope.doneFlipping = false;
             $scope.flipped = false;
+            $timeout(function(){
+              $scope.doneFlipping = true;
+              $scope.password = '';
+            }, 500);
           };
 
           $scope.passwordSaved = function passwordSaved() {
-            FileService.addPasswordToFile($scope.file, $scope.password);
-            $scope.doneFlipping = false;
-            $scope.flipped = false;
+            FileService.addPasswordToFile($scope.file, $scope.password).then(function() {
+              $scope.doneFlipping = false;
+              $scope.flipped = false;
+              $timeout(function(){
+                $scope.doneFlipping = true;
+                $scope.password = '';
+              }, 500);
+            }, function(reason) {
+              // Error state, shake
+            });
           };
 
           $scope.setPassword = function setPassword() {
