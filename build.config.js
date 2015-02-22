@@ -77,7 +77,7 @@ module.exports = {
       'vendor/restangular/dist/restangular.js',
       'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
       'vendor/zeroclipboard/dist/ZeroClipboard.min.js',
-      'vendor/zeroclipboard/dist/ZeroClipboard.min.map.js',
+      'vendor/zeroclipboard/dist/ZeroClipboard.min.map  ',
       'vendor/ng-clip/dest/ng-clip.min.js'
     ],
     css: [
