@@ -45,7 +45,7 @@ angular.module(
 
     console.log('fileInfo', fileInfo);
 
-    $scope.downloadUrl = "http://localhost:9000/download/" + fileInfo.shortUrlHash + "/" +
+    $scope.downloadUrl = "https://pigion-core.herokuapp.com/download/" + fileInfo.shortUrlHash + "/" +
       fileInfo.fileName.substr(actualFileNameStart);
 
   });

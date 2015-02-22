@@ -1,6 +1,4 @@
-angular.module('pigionWebApp.dashboard.userUpload', [
-  'ngClipboard'
-])
+angular.module('pigionWebApp.dashboard.userUpload', [ ])
 
     .directive('userUpload', function () {
     return {
@@ -29,7 +27,7 @@ angular.module('pigionWebApp.dashboard.userUpload', [
               });
           }
 
-          if ($scope.file.contentType.indexOf('image') === 0) {
+          if ($scope.file.contentType !== undefined && $scope.file.contentType.indexOf('image') === 0) {
             $scope.imageType = true;
           }
 

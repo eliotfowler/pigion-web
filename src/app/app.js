@@ -14,7 +14,8 @@ angular.module('pigionWebApp', [
   'pigionWebApp.download',
   'ui.router',
   'interceptors.authHttpResponseInterceptor',
-  'services.fileService'
+  'services.fileService',
+  'ngClipboard'
 ])
 
   .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider, RestangularProvider, $httpProvider ) {
@@ -36,6 +37,10 @@ angular.module('pigionWebApp', [
   .config(['$httpProvider',function($httpProvider) {
     //Http Intercpetor to check auth failures for xhr requests
     $httpProvider.interceptors.push('authHttpResponseInterceptor');
+  }])
+
+  .config(['ngClipProvider', function(ngClipProvider) {
+    ngClipProvider.setPath("vendor/zeroclipboard/dist/ZeroClipboard.swf");
   }])
 
   .controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
