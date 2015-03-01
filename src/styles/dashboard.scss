@@ -4,6 +4,10 @@
 	padding: 0px !important;
 }
 
+div#bs-example-navbar-collapse-1 {
+padding-right: 0px;
+}
+
 .navbar {
   border-radius: 0px;
   background-color: rgb(65,74,91);
@@ -13,7 +17,9 @@
  
 .navbar-brand {
   padding: 0px;
+  margin: 0px !important;
 }
+
 
 .navbar-brand img {
 margin-top: 10px;
@@ -58,6 +64,70 @@ ul.nav li a:hover {
 color: #555;
 background-color: #455263;
 }
+
+
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+background: #333e4d;
+}
+
+ul.dropdown-menu.dark {
+background: #333e4d;
+}
+
+ul.dark li a:hover {
+background: none;
+}
+
+
+// Hot Keys 
+
+.cfp-hotkeys-container.fade.ng-scope.in {
+background: rgba(65, 74, 91, 0.95);
+}
+
+td.cfp-hotkeys-text.ng-binding {
+color: white;
+}
+
+.cfp-hotkeys-key {
+display: inline-block;
+color: #fff;
+background-color: #333e4d;
+border: 8px solid #333e4d;
+border-radius: 5px;
+text-align: center;
+margin-right: 5px;
+box-shadow: none;
+padding: 5px 9px;
+font-size: 1em;
+}
+
+.cfp-hotkeys-close {
+position: fixed;
+top: 20px;
+right: 20px;
+font-size: 2em;
+font-weight: 700;
+padding: 5px 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+min-height: 45px;
+min-width: 45px;
+text-align: center;
+
+}
+
+.cfp-hotkeys-close {
+line-height: 25px;
+border: 2px solid #333e4d !important;
+transition: .3s ease;
+}
+	.cfp-hotkeys-close:hover {
+	background: #333e4d;
+	color: white;
+	}
+
 
 
 /* Top Info Section */
@@ -511,7 +581,7 @@ text-align: center;
   height: 98px;
   width: 100%;
   color: #8ba8ce; /* color after you fill it in */
-  padding: 15px 15px 15px 100px;
+  padding: 15px 15px 15px 30px;
   font-size: 3.05em;
   transition: .3s ease;
   margin-top: 1px;
@@ -560,8 +630,6 @@ width: 50%;
 .wrong-face {
   display: none !important;
 }
-
-
 
 
 // Sign up and Password Section
