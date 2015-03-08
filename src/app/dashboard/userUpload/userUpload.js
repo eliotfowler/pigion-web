@@ -1,4 +1,4 @@
-angular.module('pigionWebApp.dashboard.userUpload', [ ])
+angular.module('pigionWebApp.dashboard.userUpload', [])
 
     .directive('userUpload', function () {
     return {
@@ -46,6 +46,15 @@ angular.module('pigionWebApp.dashboard.userUpload', [ ])
               $scope.doneFlipping = true;
               $scope.password = '';
             }, 500);
+          };
+
+          $scope.getDownloadFileUrl = function getDownloadFileUrl() {
+            console.log('sending ' + $scope.downloadPageUrl);
+            return $scope.downloadPageUrl;
+          };
+
+          $scope.doSomething = function() {
+            console.log('print something');
           };
 
           $scope.passwordSaved = function passwordSaved() {

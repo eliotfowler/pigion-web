@@ -126,7 +126,18 @@ angular.module(
           $scope.$broadcast('fileUploadPercent-' + newGuid, parseInt(100.0 * evt.loaded / evt.total, 10));
         }).success(function (data, status, headers, config) {
           // file is uploaded successfully
-          console.log(data);
+          console.log("data", data);
+          // Modify the file object
+          for(var i=0; i<$scope.files.length; i++) {
+            var currentFile = $scope.files[i];
+            if(currentFile.guid === newGuid) {
+              currentFile.expirationDate = data.expirationTime;
+              currentFile.id = data.id;
+              $scope.files[i] = currentFile;
+              break;
+            }
+          }
+          $scope.$apply();
         }).error(function (result) {
           console.log('error', result);
         });
