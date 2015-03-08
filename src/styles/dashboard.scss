@@ -1,3 +1,6 @@
+button:focus {outline:0;}
+input:focus {outline:0;}
+
 /* Navbar */
 
 .nopad{
@@ -53,7 +56,7 @@ float: left;
 }
 
 ul.nav li a {
-  color: #646f7e !important;
+  color: #aeaeae !important;
 }
 
 ul.nav li a:hover {
@@ -136,10 +139,9 @@ transition: .3s ease;
 margin-top: 4px;
 }
 .top_dash {
-margin-top: 10px;
-height: 30px;
-margin-bottom: 10px;
-width: 100%;
+  height: 30px;
+  width: 100%;
+  margin: 10px 0px;
 }
 
 
@@ -156,6 +158,7 @@ width: 80px;
 float: left;
 height: 30px;
 }
+
 
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
@@ -631,6 +634,19 @@ width: 50%;
   display: none !important;
 }
 
+@media (max-width:768px){
+	.navbar-nav {
+	margin: 0px 0px;
+	}
+
+	.navbar-nav > li > a {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	line-height: 20px;
+	}
+}
+	
+
 
 // Sign up and Password Section
 @media (max-width:600px){
@@ -642,6 +658,10 @@ width: 50%;
 	padding-right: 0px;
 	}
 	
+	.navbar{
+	  padding: 0px 10px;
+	}
+	
 	.progress-background {
 	display: block;
 	height: 100px;
@@ -649,9 +669,15 @@ width: 50%;
 	}
 	
 	.file-in-files {
-	height: 140px;
+	height: 130px;
+	margin-bottom: 5px;
 	}
-	
+	.flip {
+	height: 130px;
+	}
+	.password-enter input {
+	height: 128px;
+	}
 
 	.middle-section.col-sm-8 {
 	width: 80%;
@@ -747,7 +773,25 @@ max-width: 450px;
 	max-width: 100%;
 	}
 
+	.nosmall {
+	display: none;
+	}
+	
+	.password-enter input {
+	padding: 15px 15px 15px 13px;
+	font-size: 2.0em;
+	}
+	form.ng-pristine.ng-valid {
+	float: left;
+	width: 60%;
+	}
+	.password_buttons {
+	width: 40%;
+	}
 }
+
+@media (max-width:320px){
+	}
 
 
 @media (max-width:320px){

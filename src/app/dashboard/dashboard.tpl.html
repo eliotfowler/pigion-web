@@ -7,7 +7,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container container-fluid">
 
-        <div class="collapse navbar-collapse nopad" id="bs-example-navbar-collapse-1">
+        <div class="navbar nopad" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav">
                 <a class="navbar-brand pull-left" href="#"><img src="assets/images/logo.png" class="logo"></a>
@@ -43,9 +43,9 @@
 <div class="container">
 
 	<div class="top_dash row">
-	    <div id="files-information" class="col-xs-4">
+	    <div id="files-information" class="col-xs-9 col-sm-4">
 	        <ul class="horizontal">
-	            <li>
+	            <li class="count">
 	                <ng-pluralize class="file-tidbit"
 	                              count="userFileInfo.numTotalUploads"
 	                              when="{'0':'No files',
@@ -53,15 +53,15 @@
 	                                     'other':'{} files'}">
 	                </ng-pluralize>
 	            </li>
-	            <li><span class="file-tidbit">{{userFileInfo.totalSizeUploaded | bytes}}</span></li>
-	            <li><span class="file-tidbit">{{userFileInfo.numDownloads}} delivered</span></li>
+	            <li class="size"><span class="file-tidbit">{{userFileInfo.totalSizeUploaded | bytes}}</span></li>
+	            <li class="delivered"><span class="file-tidbit">{{userFileInfo.numDownloads}} delivered</span></li>
 	        </ul>
 	    </div>
 		
-        <div class="center-subheader col-xs-8">
+        <div class="center-subheader col-xs-3 col-sm-8">
 	        <input type="file" class="custom-file-input" ng-file-select="onFileSelect($files)">
 			<!-- <input class="upload-button" type="file" ng-file-select="onFileSelect($files)"> -->
-            <span> or Drag files in to upload</span>
+            <span class="nosmall"> or Drag files in to upload</span>
         </div>
 
 		

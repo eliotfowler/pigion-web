@@ -49,7 +49,7 @@ input:-webkit-autofill {
     border-radius: 3px;
     padding: 9px 20px;
     text-align: center;
-    font-size: .9em;
+    font-size: 1em;
     line-height: 1.4em;
     font-weight: 200;
     display: table;
@@ -67,22 +67,22 @@ input:-webkit-autofill {
 }
 
 .center {
-    width: 260px;
+    width: 300px;
     margin: 20vh auto;
 }
 
 .s_field input {
-    border-radius: 3px;
-    background-color: rgb( 58, 64, 74 );
-    border: none;
-    height: 50px;
-    margin-bottom: 10px;
-    width: 250px;
-    color: #8ba8ce; /* color after you fill it in */
-    padding: 15px;
-    font-size: 1.05em;
-    transition: .3s;
-}
+  border-radius: 3px;
+  background-color: #3a404a;
+  border: none;
+  height: 50px;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #8ba8ce;
+  padding: 15px;
+  font-size: 1.2em;
+  transition: .3s;
+  }
 
 /*.container {*/
     /*position: relative;*/
@@ -103,8 +103,7 @@ button.btn.btn-primary {
     height: 40px;
     border-radius: 3px;
     padding: 10px 60px 10px 15px;
-    margin: 0 !important;
-    font-size: .9em;
+    font-size: 1em;
     line-height: 1.4em;
     font-weight: 100;
 }
@@ -112,32 +111,29 @@ button.btn.btn-primary {
 
 
 .special_b {
-    width: 120px;
-    height: 40px;
-    top: calc(50% - 18px);
-    left: 50px;
-    border: solid 1px #ccc;
-    border-radius: 8px;
-    color: #808691;
-    font: 16px sans-serif;
-    float: left;
-    text-align: left;
-    padding: 10px 20px 10px 15px !important;
-
-    /* set up background gradient and animation */
-    /*  background-image: linear-gradient( 90deg, #5187c4, #1c2f45); Original */
-    background-image: -moz-linear-gradient(left,  rgba(79,208,166,1) 0%, rgba(35,183,169,1) 45%, rgba(58,64,74,1) 60%, rgba(63,73,86,1) 71%, rgba(63, 73, 86, 1) 100%); /* FF3.6+ */
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(79,208,166,1)), color-stop(45%,rgba(35,183,169,1)), color-stop(60%,rgba(58,64,74,1)), color-stop(71%,rgba(58,64,74,1)), color-stop(100%,rgba(63, 73, 86, 1))); /* Chrome,Safari4+ */
-    background-image: -webkit-linear-gradient(left,  rgba(79,208,166,1) 0%,rgba(35,183,169,1) 45%,rgba(58,64,74,1) 60%,rgba(58,64,74,1) 71%,rgba(63, 73, 86, 1) 100%); /* Chrome10+,Safari5.1+ */
-    background-image: -o-linear-gradient(left,  rgba(79,208,166,1) 0%,rgba(35,183,169,1) 45%,rgba(58,64,74,1) 60%,rgba(58,64,74,1) 71%,rgba(63, 73, 86, 1) 100%); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(left,  rgba(79,208,166,1) 0%,rgba(35,183,169,1) 45%,rgba(58,64,74,1) 60%,rgba(58,64,74,1) 71%,rgba(63, 73, 86, 1) 100%); /* IE10+ */
-    background-image: linear-gradient(to right,  rgba(79,208,166,1) 0%,rgba(35,183,169,1) 45%,rgba(58,64,74,1) 60%,rgba(58,64,74,1) 71%,rgba(63, 73, 86, 1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4fd0a6', endColorstr='#803a404a',GradientType=1 ); /* IE6-9 */
-    background-size: 400% 300%;
-    background-position: 100% 0;
-    transition: background-position 0.7s ease, color 0.7s ease;
-    transition-delay: .1s;
+  margin-right: 4%;
+  width: 48%;
+  height: 40px;
+  top: calc(50% - 18px);
+  left: 50px;
+  color: #808691;
+  font: 16px sans-serif;
+  float: left;
+  text-align: left;
+  padding: 10px 20px 10px 15px !important;
+  background-image: -moz-linear-gradient(left, #4fd0a6 0%, #23b7a9 45%, #3a404a 60%, #3f4956 71%, #3f4956 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #4fd0a6), color-stop(45%, #23b7a9), color-stop(60%, #3a404a), color-stop(71%, #3a404a), color-stop(100%, #3f4956));
+  background-image: -webkit-linear-gradient(left, #4fd0a6 0%, #23b7a9 45%, #3a404a 60%, #3a404a 71%, #3f4956 100%);
+  background-image: -o-linear-gradient(left, #4fd0a6 0%, #23b7a9 45%, #3a404a 60%, #3a404a 71%, #3f4956 100%);
+  background-image: -ms-linear-gradient(left, #4fd0a6 0%, #23b7a9 45%, #3a404a 60%, #3a404a 71%, #3f4956 100%);
+  background-image: linear-gradient(to right, #4fd0a6 0%, #23b7a9 45%, #3a404a 60%, #3a404a 71%, #3f4956 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4fd0a6', endColorstr='#803a404a',GradientType=1 );
+  background-size: 400% 300%;
+  background-position: 100% 0;
+  transition: background-position 0.7s ease, color 0.7s ease;
+  transition-delay: .1s;
 }
+
 .special_b:hover {
     /* shift background gradient position */
     background-position: 0 0;
@@ -161,22 +157,21 @@ a.btn2:hover {
     border: 1px solid #3a404a;
     height: 40px;
     border-radius: 3px;
-    font-size: .9em;
+    font-size: 1em;
     line-height: 1.4em;
     font-weight: 100;
 }
 
 
 .username {
-    width: 120px;
-    height: 0px;
-    display: block;
-    float: left;
-    padding: 19px 0px;
-    line-height: 0px;
-    text-align: center;
-    font-weight: 200;
-    margin-left: 10px;
+  width: 48%;
+  height: 0px;
+  display: block;
+  float: left;
+  padding: 19px 0px;
+  line-height: 0px;
+  text-align: center;
+  font-weight: 200;
 }
 
 .sign_up {
