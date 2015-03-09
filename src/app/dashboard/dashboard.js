@@ -57,6 +57,10 @@ angular.module(
 
         $scope.files.push(file);
       }
+
+      $scope.files.sort(function(a,b){
+        return a.id > b.id ? 1 : -1;
+      });
     });
 
     function getSortFunction(fieldName) {
