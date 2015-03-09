@@ -48,8 +48,22 @@ angular.module('pigionWebApp.dashboard.userUpload', [])
             }, 500);
           };
 
+          $scope.deleteTapped = function deleteTapped() {
+            if($scope.date < new Date()) {
+              // File is expired, delete
+              console.log('delete');
+            } else {
+              // File is not expired yet, expire
+              FileService.expireFile($scope.file).then(function() {
+                console.log('expire');
+                $scope.date = new Date();
+              }, function(reason) {
+                // Error, do something
+              });
+            }
+          };
+
           $scope.getDownloadFileUrl = function getDownloadFileUrl() {
-            console.log('sending ' + $scope.downloadPageUrl);
             return $scope.downloadPageUrl;
           };
 
@@ -71,7 +85,6 @@ angular.module('pigionWebApp.dashboard.userUpload', [])
           };
 
           $scope.setPassword = function setPassword() {
-            console.log('adding password');
             Restangular.all('files').customPUT( null, 'addPassword/' + $scope.file.id, {'password': $scope.password}, {});
           };
 
